@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/solid_rectangle_10_ffffff_top">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size45"
+        android:drawableLeft="@mipmap/icon_back"
+        android:drawablePadding="@dimen/size10"
+        android:gravity="center"
+        android:paddingLeft="@dimen/size15"
+        android:text="所有评论"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize18" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/size6">
+
+        <TextView
+            android:id="@+id/tvSelect1"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvSelect2"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最早"
+            android:textColor="@color/grayAA"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvSelect3"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最热"
+            android:textColor="@color/grayAA"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/color_line2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size45"
+        android:layout_marginBottom="@dimen/size55"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size55"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/color_line" />
+
+            <EditText
+                android:id="@+id/et_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginBottom="@dimen/size10"
+                android:layout_toLeftOf="@+id/tv_send"
+                android:background="@drawable/solid_rectangle_30_f7f7f7"
+                android:drawablePadding="@dimen/size8"
+                android:focusable="true"
+                android:hint=""
+                android:maxLength="1000"
+                android:minHeight="@dimen/size40"
+                android:paddingStart="@dimen/size15"
+                android:paddingTop="@dimen/size10"
+                android:paddingEnd="@dimen/size8"
+                android:paddingBottom="@dimen/size10"
+                android:singleLine="true"
+                android:textColor="@color/gray28"
+                android:textColorLink="@color/gray99"
+                android:textSize="@dimen/textSize12" />
+
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="@dimen/size60"
+                android:layout_height="@dimen/size30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/size15"
+                android:gravity="center"
+                android:text="发布"
+                android:textColor="@color/color_ffcc03"
+                android:textSize="@dimen/textSize14" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/vKeyBoard"
+            android:layout_width="@dimen/line"
+            android:layout_height="@dimen/size300"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

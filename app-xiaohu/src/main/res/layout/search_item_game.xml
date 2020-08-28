@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size90"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size10"
+    android:paddingBottom="@dimen/size10"
+    android:paddingRight="@dimen/size15">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/size70"
+        android:layout_height="@dimen/size70"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="10dp"
+        android:layout_marginRight="@dimen/size10"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray33"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="@string/app_name"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/iv_image"
+        android:lines="1"
+        android:text="@string/app_name"
+        android:paddingRight="@dimen/size5"
+        android:textColor="@color/grayAA"
+        android:textSize="@dimen/textSize12" />
+
+
+    <TextView
+        android:id="@+id/tvAttention"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size25"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/solid_gradient_15_ffcc03"
+        android:gravity="center"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:text="进入"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize12" />
+
+</RelativeLayout>

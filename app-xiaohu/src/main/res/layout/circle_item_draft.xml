@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size80"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size60"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size15"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="visible"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="@dimen/size5"
+            app:riv_oval="false" />
+
+        <ImageView
+            android:id="@+id/iv_video_start"
+            android:layout_width="@dimen/size20"
+            android:layout_height="@dimen/size20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/size20"
+            android:src="@mipmap/ic_video_start" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ivIcon"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingTop="@dimen/size10"
+            android:text="@string/app_name"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/app_name"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray77"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size60">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/rgTab"
+        android:background="@color/color_line" />
+
+    <ImageView
+        android:id="@+id/ivOver"
+        android:layout_width="@dimen/size55"
+        android:layout_height="@dimen/size55"
+        android:src="@drawable/oval_ffffff" />
+
+    <RadioGroup
+        android:id="@+id/rgTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/card_rb_home"
+            style="@style/rb_style"
+            android:checked="true"
+            android:drawableTop="@drawable/main_rb_1"
+            android:paddingTop="@dimen/size7"
+            android:paddingBottom="@dimen/size6"
+            android:text="首页"
+            android:textColor="@color/text_color_main"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/card_rb_tool"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/main_rb_tool"
+            android:paddingTop="@dimen/size7"
+            android:paddingBottom="@dimen/size6"
+            android:text="工具"
+            android:textColor="@color/text_color_main"
+            android:textSize="10sp"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/card_rb_msg"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/main_rb_2"
+            android:paddingTop="@dimen/size7"
+            android:paddingBottom="@dimen/size6"
+            android:text="圈子"
+            android:textColor="@color/text_color_main"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/card_rb_me"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/main_rb_3"
+            android:paddingTop="@dimen/size7"
+            android:paddingBottom="@dimen/size6"
+            android:text="我的"
+            android:textColor="@color/text_color_main"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="@dimen/size130"
+        android:layout_height="@dimen/size50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/iocn_main_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回到顶部"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize12" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivNewMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size8"
+        android:layout_marginTop="@dimen/size15"
+        android:src="@drawable/dot_red"
+        android:visibility="gone" />
+</RelativeLayout>

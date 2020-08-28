@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:paddingTop="@dimen/size15"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginStart="@dimen/size20"
+        android:layout_marginEnd="@dimen/size20"
+        app:cardBackgroundColor="@color/color_f5f5f5"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rlGameInfo"
+            android:layout_width="@dimen/size280"
+            android:layout_height="@dimen/size280"
+            android:layout_marginLeft="@dimen/size120"
+            android:layout_marginTop="-30dp"
+            android:rotation="30">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon1"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/size15"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon2"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_toRightOf="@+id/ivIcon1"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon3"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_below="@+id/ivIcon1"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon4"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_below="@+id/ivIcon1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_toRightOf="@+id/ivIcon3"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon5"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_below="@+id/ivIcon1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginTop="@dimen/size15"
+                android:layout_toRightOf="@+id/ivIcon4"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon6"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_below="@+id/ivIcon3"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size15"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon7"
+                android:layout_width="@dimen/size80"
+                android:layout_height="@dimen/size80"
+                android:layout_below="@+id/ivIcon4"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginTop="@dimen/size15"
+                android:layout_toRightOf="@+id/ivIcon3"
+                android:scaleType="centerCrop"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size10"
+                app:riv_oval="false" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size35"
+        android:paddingTop="@dimen/size15"
+        android:text="来自专题"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size35"
+        android:maxWidth="@dimen/size120"
+        android:paddingTop="@dimen/size30"
+        android:text="来自专题"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize15"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/ivLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/size20"
+        android:layout_marginEnd="@dimen/size20"
+        android:background="@color/color_line2" />
+</FrameLayout>

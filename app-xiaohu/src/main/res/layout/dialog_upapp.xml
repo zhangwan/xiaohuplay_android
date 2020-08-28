@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlInfo"
+    android:layout_width="@dimen/size260"
+    android:layout_height="wrap_content"
+    android:background="@drawable/solid_rectangle_10_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_upapp_bg"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius_top_left="@dimen/size10"
+            app:riv_corner_radius_top_right="@dimen/size10"
+            app:riv_oval="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size13"
+            android:layout_marginTop="@dimen/size20"
+            android:text="发现新版本"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvVerion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/size13"
+            android:layout_marginBottom="@dimen/size15"
+            android:background="@drawable/solid_rectangle_10_faed90"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:text="v1.0.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size30"
+            android:src="@mipmap/icon_upapp_ver" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="@dimen/size260"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size20"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size5"
+            android:text="新版本特性:"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize16" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/size160"
+            android:minHeight="@dimen/size80"
+            android:paddingLeft="@dimen/size20"
+            android:paddingRight="@dimen/size20"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/app_name"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize14" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+            <View
+                android:layout_width="@dimen/line"
+                android:layout_height="match_parent"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/define"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="立即升级"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProgress"
+        android:layout_width="@dimen/size260"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingTop="@dimen/size20"
+        android:orientation="vertical">
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:max="100"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15"
+            android:progress="0"
+            android:progressDrawable="@drawable/seekbar_bg"
+            android:thumb="@mipmap/seekbar_thumb" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/size15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载中..."
+                android:textColor="@color/gray33"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/gray33"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

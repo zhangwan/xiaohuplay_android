@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size120"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/size15"
+    android:background="@mipmap/icon_me_share"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/size12"
+        android:layout_marginEnd="@dimen/size12"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/size4"
+        android:layout_height="wrap_content">
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@mipmap/icon_share"/>
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/size40"
+            android:gravity="center"
+            android:drawablePadding="@dimen/size10"
+            android:text="分享"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="@dimen/size8"
+       style="@style/DividerType"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/size12"
+        android:layout_marginEnd="@dimen/size12"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/size4"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_black"/>
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/size40"
+            android:gravity="center"
+            android:text="拉黑"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+</LinearLayout>
+

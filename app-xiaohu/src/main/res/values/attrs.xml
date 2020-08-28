@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HeadZoomLayout">
+        <!--头部视图id-->
+        <attr name="headViewId" format="reference" />
+        <!--头部最大放大比例-->
+        <attr name="maxZoomRatio" format="float" />
+        <!--是否可以放大头部-->
+        <attr name="zoomEnable" format="boolean" />
+        <!--最大拖拽距离-->
+        <attr name="maxDragDistance" format="float" />
+        <!--放大加速度比例-->
+        <attr name="dragAccelerationRatio" format="float" />
+        <!--是否开启减速回弹模式-->
+        <attr name="useDecelerateInterpolator" format="boolean" />
+        <!--最大回弹动画时间-->
+        <attr name="maxRecoverTime" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MedalTextView">
+<!--        <attr name="medal_text" format="string" />-->
+        <attr name="medal_textColor" format="reference|color" />
+<!--        <attr name="medal_src" format="reference" />-->
+        <attr name="medal_is_bold" format="boolean" />
+        <attr name="medal_textSize" format="reference|dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LikeView">
+        <attr name="like_sel" format="reference" />
+        <attr name="like_nor" format="reference" />
+    </declare-styleable>
+</resources>

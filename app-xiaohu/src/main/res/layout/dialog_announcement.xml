@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/solid_rectangle_10_ffffff_top">
+
+    <ImageView
+        android:id="@+id/iv_close_left"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon_close" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size45"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="公告详情"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/color_line2" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:paddingLeft="@dimen/size15"
+        android:paddingTop="@dimen/size10"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingRight="@dimen/size15"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+
+</RelativeLayout>

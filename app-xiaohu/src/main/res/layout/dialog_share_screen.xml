@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size50"
+        android:layout_marginBottom="@dimen/size180">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size20"
+            android:layout_marginEnd="@dimen/size20"
+            android:visibility="visible"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size120"
+                android:scaleType="fitXY" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/size60"
+                android:layout_height="@dimen/size60"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginTop="@dimen/size115"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_bg"
+                app:riv_corner_radius="@dimen/size12"
+                app:riv_oval="false" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_bg"
+                android:layout_marginTop="@dimen/size115"
+                android:layout_marginEnd="@dimen/size15"
+                android:background="@mipmap/amway_index"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_amway_index"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/text_size_8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.8"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/text_size_20" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size20"
+                android:layout_marginTop="@dimen/size5"
+                android:text="飞人学院"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/size14"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar"
+                app:layout_constraintTop_toBottomOf="@id/iv_bg" />
+
+
+
+                <ImageView
+                    android:id="@+id/ivShotBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size20"
+                    android:layout_marginEnd="@dimen/size20"
+                    app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"
+                app:layout_constraintTop_toBottomOf="@id/ivShotBg">
+
+                <com.tinytiger.common.view.title.AvatarView
+                    android:id="@+id/avUser"
+                    android:layout_width="@dimen/size40"
+                    android:layout_height="@dimen/size40"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size15"
+                    android:layout_marginRight="@dimen/size15"
+                    android:layout_marginBottom="@dimen/size15"
+                    app:TalentSize="@dimen/size40"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_game_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size15"
+                    android:text="游戏初学者"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/size15"
+                    app:layout_constraintStart_toEndOf="@id/avUser"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar1"
+                    style="@style/RadingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size3"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="1"
+                    app:layout_constraintStart_toEndOf="@id/avUser"
+                    app:layout_constraintTop_toBottomOf="@id/tv_game_name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:paddingBottom="@dimen/size10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_bottom"
+                >
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_launcher"
+
+                    />
+                  <TextView
+                      android:id="@+id/tv_app_name"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/app_name"
+                      android:textSize="@dimen/text_size_17"
+                      android:textColor="@color/gray33"
+                      android:layout_marginStart="@dimen/size15"
+                      app:layout_constraintStart_toEndOf="@id/iv_logo"
+                      />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_app_desc"
+                    android:textSize="@dimen/text_size_12"
+                    android:textColor="@color/gray33"
+                    android:layout_marginStart="@dimen/size15"
+                    app:layout_constraintStart_toEndOf="@id/iv_logo"
+                    app:layout_constraintTop_toBottomOf="@id/tv_app_name"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size180"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@drawable/solid_rectangle_10_ffffff_top"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size90"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_marginTop="@dimen/size15"
+            android:layout_marginRight="@dimen/size20"
+            android:layout_marginBottom="@dimen/size40"
+            android:background="@drawable/solid_rectangle_20_f7f7f7"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray66"
+            android:textSize="@dimen/textSize18" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size7"
+            android:layout_marginBottom="@dimen/size7"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15">
+
+            <EditText
+                android:id="@+id/et_send"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/solid_rectangle_15_f5f6f7"
+                android:drawableLeft="@mipmap/icon_search_b"
+                android:drawablePadding="@dimen/size8"
+                android:focusable="true"
+                android:hint="搜索喜爱的内容"
+                android:imeOptions="actionSearch"
+                android:paddingRight="@dimen/size50"
+                android:maxLength="10"
+                android:paddingStart="@dimen/size15"
+                android:singleLine="true"
+                android:textColor="@color/gray28"
+                android:textColorLink="@color/gray99"
+                android:textSize="@dimen/textSize12" />
+
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="@dimen/size50"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="center"
+                android:src="@mipmap/icon_close"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15"
+            android:text="取消"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size45">
+
+    </FrameLayout>
+</RelativeLayout>

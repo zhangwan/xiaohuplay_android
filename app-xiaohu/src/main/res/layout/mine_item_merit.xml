@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size80"
+    android:layout_marginStart="@dimen/size16"
+    android:layout_marginTop="@dimen/size10"
+    android:layout_marginEnd="@dimen/size16">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="52dp"
+        android:layout_height="@dimen/size26"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/size15"
+        android:layout_marginEnd="@dimen/size25"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_action"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingTop="@dimen/size13"
+        android:text="@string/app_name"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_toLeftOf="@+id/tv_action"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingTop="@dimen/size8"
+        android:text="@string/app_name"
+        android:textColor="@color/gray66"
+        android:textSize="@dimen/textSize12" />
+
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size15"
+        android:gravity="center"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize12" />
+
+</RelativeLayout>
+
+
+
+
+

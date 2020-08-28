@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size10"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/size16">
+
+    <TextView
+        android:id="@+id/tv_say"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size8"
+        android:text="发布了一条评价"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating_bar"
+        style="@style/RadingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size8"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="0"
+        app:layout_constraintBottom_toBottomOf="@id/tv_say"
+        app:layout_constraintStart_toEndOf="@id/tv_say"
+        app:layout_constraintTop_toTopOf="@id/tv_say" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size4"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/game_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size65"
+        android:layout_marginTop="@dimen/size16"
+        android:paddingLeft="@dimen/size10"
+        android:background="@drawable/solid_rectangle_4_f5f6f7"
+        app:layout_constraintTop_toBottomOf="@id/tv_say">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/size10"
+            app:riv_oval="false" />
+
+
+        <TextView
+            android:id="@+id/tv_game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/size50"
+            android:layout_marginStart="@dimen/size8"
+            android:layout_toEndOf="@id/iv_avatar"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/size15"
+            android:src="@mipmap/icon_forward_ccc" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size16"
+        android:textColor="@color/gray33"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSize16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_layout" />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size8"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

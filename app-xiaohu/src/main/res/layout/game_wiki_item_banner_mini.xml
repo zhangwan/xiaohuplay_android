@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size70"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size50"
+        android:layout_height="@dimen/size50"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/size5"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/size50"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/size5"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize12" />
+</LinearLayout>

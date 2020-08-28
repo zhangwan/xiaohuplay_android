@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size100"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/icon_popup"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:layout_marginTop="@dimen/size4"
+        android:drawableLeft="@mipmap/icon_report"
+        android:drawablePadding="@dimen/size10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size16"
+        android:text="举报"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+
+</LinearLayout>

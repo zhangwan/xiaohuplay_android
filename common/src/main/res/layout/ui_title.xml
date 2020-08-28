@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_title"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="小虎Hoo"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/text_title"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/left_back_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size25"
+        android:src="@mipmap/icon_back" />
+
+    <TextView
+        android:id="@+id/left_down_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableRight="@mipmap/icon_down"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size20"
+        android:paddingRight="@dimen/size20"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/right_down_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@mipmap/icon_down"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size20"
+        android:paddingRight="@dimen/size20"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size20"
+        android:paddingRight="@dimen/size20"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/size20"
+        android:paddingRight="@dimen/size20"
+        android:src="@mipmap/icon_more_b"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line" />
+</RelativeLayout>

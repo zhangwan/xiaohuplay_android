@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <com.haima.hmcp.widgets.HmcpVideoView
+        android:id="@+id/hmcpVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@drawable/oval_6dd400"
+        android:drawablePadding="@dimen/size5"
+        android:padding="@dimen/size15"
+        android:text="0ms"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize14" />
+
+    <View
+        android:id="@+id/vView"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="@dimen/size220"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@color/black_80"
+        android:paddingBottom="@dimen/size20"
+        android:visibility="gone"
+        android:paddingTop="@dimen/size50">
+
+        <LinearLayout
+            android:id="@+id/llMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvSet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size50"
+                android:gravity="center"
+                android:text="设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size50"
+                android:layout_below="@+id/tvSet"
+                android:gravity="center"
+                android:text="分享"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:id="@+id/tvAddTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size50"
+                android:layout_below="@+id/tvShare"
+                android:gravity="center"
+                android:text="增加时长"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:id="@+id/tvClose"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size50"
+                android:layout_below="@+id/tvAddTime"
+                android:gravity="center"
+                android:text="退出游戏"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvQuality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:scrollbars="none" />
+
+        <TextView
+            android:layout_width="@dimen/size170"
+            android:layout_height="@dimen/size30"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/stroke_rectangle_15_ffcc03"
+            android:drawableLeft="@mipmap/icon_time"
+            android:drawablePadding="@dimen/size10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:textSize="@dimen/textSize16"
+            android:text="剩余时长："
+            android:textColor="@color/color_ffcc03" />
+
+        <TextView
+            android:id="@+id/tvTimeOver"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size30"
+            android:textSize="@dimen/textSize16"
+            android:paddingLeft="@dimen/size135"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:text="00:00"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:src="@mipmap/icon_game_more"
+        android:scaleType="center"
+        android:layout_marginRight="@dimen/size15"
+        android:padding="@dimen/size15"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

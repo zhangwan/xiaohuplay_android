@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size280"
+    android:layout_height="460dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/x5webView"
+        android:layout_width="match_parent"
+        android:layout_height="380dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size20"
+        android:paddingTop="@dimen/size7"
+        android:paddingRight="@dimen/size20"
+        android:text="如果你同意请点击下面的按钮以接受我们的服务。"
+        android:textSize="@dimen/textSize12" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            style="@style/TextMainType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+
+        <View
+            android:layout_width="@dimen/line"
+            android:layout_height="match_parent"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            style="@style/TextMainType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="同意" />
+    </LinearLayout>
+
+</LinearLayout>

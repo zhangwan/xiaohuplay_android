@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginStart="@dimen/size16"
+    android:layout_marginEnd="@dimen/size16"
+    android:layout_marginTop="@dimen/size8"
+    android:layout_marginBottom="@dimen/size4"
+    style="@style/DividerType"/>
+

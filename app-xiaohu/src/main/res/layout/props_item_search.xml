@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size110"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size10"
+    android:paddingRight="@dimen/size15"
+    android:paddingBottom="@dimen/size10">
+
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size85"
+        android:layout_height="@dimen/size85"
+        android:layout_gravity="center"
+        android:scaleType="centerInside" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:layout_toLeftOf="@+id/tvDesc"
+        android:paddingLeft="@dimen/size15"
+android:textStyle="bold"
+        android:text="挂件"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16" />
+
+
+    <TextView
+        android:id="@+id/tvCate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:paddingLeft="@dimen/size15"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/size5"
+        android:text="挂件"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="@dimen/size75"
+        android:layout_height="@dimen/size25"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/solid_gradient_20_ffcc03"
+        android:textColor="@color/gray33"
+        android:gravity="center"
+        android:text="佩戴"
+        android:textSize="@dimen/textSize12" />
+
+
+</RelativeLayout>

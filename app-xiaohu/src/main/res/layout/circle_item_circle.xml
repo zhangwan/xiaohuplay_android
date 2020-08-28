@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size100"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size15"
+    android:paddingRight="@dimen/size15">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size70"
+        android:layout_height="@dimen/size70"
+        android:layout_marginRight="@dimen/size10"
+        android:scaleType="centerCrop"
+        app:riv_border_width="0dip"
+        app:riv_corner_radius="@dimen/size5"
+        app:riv_oval="false" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:paddingTop="@dimen/size10"
+        android:text="@string/app_name"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/size20"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:text="@string/app_name"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line2" />
+</RelativeLayout>

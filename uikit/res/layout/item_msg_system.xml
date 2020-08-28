@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:id="@+id/rlLike"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/img_head1"
+            android:layout_width="@dimen/size35"
+            android:layout_height="@dimen/size35"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/min_icon_like" />
+
+        <TextView
+            android:id="@+id/tvivLikeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_head1"
+            android:text="点赞"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.netease.nim.uikit.common.ui.drop.DropFake
+            android:id="@+id/dfType1"
+            android:layout_width="@dimen/size15"
+            android:layout_height="@dimen/size15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:id="@+id/rlComment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/img_head2"
+            android:layout_width="@dimen/size35"
+            android:layout_height="@dimen/size35"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/min_icon_comment" />
+
+        <TextView
+            android:id="@+id/tvivCommentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_head2"
+            android:text="评论"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.netease.nim.uikit.common.ui.drop.DropFake
+            android:id="@+id/dfType2"
+            android:layout_width="@dimen/size15"
+            android:layout_height="@dimen/size15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:id="@+id/rlSecretary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <com.netease.nim.uikit.common.ui.imageview.HeadImageView
+            android:id="@+id/img_head3"
+            android:layout_width="@dimen/size35"
+            android:layout_height="@dimen/size35"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/min_icon_tip" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/img_head3"
+            android:text="小秘书"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.netease.nim.uikit.common.ui.drop.DropFake
+            android:id="@+id/dfType3"
+            android:layout_width="@dimen/size15"
+            android:layout_height="@dimen/size15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size10"
+        android:background="@color/color_bg" />
+
+    <TextView
+        android:id="@+id/tvImList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size15"
+        android:text="聊天列表"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+</LinearLayout>

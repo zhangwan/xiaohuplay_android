@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size15"
+    android:paddingRight="@dimen/size15">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size5"
+        android:paddingBottom="@dimen/size15"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize15" />
+
+    <RelativeLayout
+        android:id="@+id/rlVideo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size195"
+        android:layout_below="@+id/tvTitle">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="@dimen/size6"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/solid_rectangle_6_ffcc03_but"
+            android:paddingLeft="@dimen/size5"
+            android:paddingTop="@dimen/size1"
+            android:paddingRight="@dimen/size5"
+            android:paddingBottom="@dimen/size1"
+            android:text="00000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize10" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_news_start" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlVideo"
+        android:paddingTop="@dimen/size15"
+        android:text="@string/app_name"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/tvWatchSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlVideo"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@mipmap/icon_read_1"
+        android:drawablePadding="@dimen/size5"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/size15"
+        android:text="0"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@+id/tvName"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@color/color_line2" />
+</RelativeLayout>

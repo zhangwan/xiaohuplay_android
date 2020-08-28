@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingTop="@dimen/size20"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size15"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_left_line" />
+
+    <TextView
+        android:id="@+id/bottom_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/size8"
+        android:text="人家是一只有底线的小脑斧"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize11" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size15"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_right_line" />
+
+</LinearLayout>

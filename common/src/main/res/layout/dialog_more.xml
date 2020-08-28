@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/solid_rectangle_10_ffffff_top"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size30">
+
+   <TextView
+       android:id="@+id/tvCollection"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/size60"
+       android:text="收藏"
+       android:gravity="center_vertical"
+       android:drawablePadding="@dimen/size12"
+       android:textColor="@color/gray66"
+       android:textSize="@dimen/textSize18"
+       android:drawableLeft="@mipmap/icon_collect_nor"
+       android:paddingLeft="@dimen/size20"
+       />
+    <TextView
+        android:id="@+id/tvReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size60"
+        android:text="举报"
+        android:gravity="center_vertical"
+        android:drawablePadding="@dimen/size10"
+        android:textColor="@color/gray66"
+        android:drawableLeft="@mipmap/icon_share_report1"
+        android:textSize="@dimen/textSize18"
+        android:paddingLeft="@dimen/size20"
+        />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:layout_marginTop="@dimen/size15"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginBottom="@dimen/size40"
+        android:background="@drawable/solid_rectangle_20_f7f7f7"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/gray66"
+        android:textSize="@dimen/textSize18" />
+
+</LinearLayout>
+

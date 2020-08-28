@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:gravity="center"
+        android:text="所有人"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <TextView
+        android:id="@+id/tvAttention"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:gravity="center"
+        android:text="我关注的人"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <TextView
+        android:id="@+id/tvNotShow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:gravity="center"
+        android:text="不显示"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize16" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_FF2D2D"
+        android:textSize="@dimen/textSize16" />
+
+
+</LinearLayout>

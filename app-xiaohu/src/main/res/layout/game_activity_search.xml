@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:paddingStart="@dimen/size20"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size30"
+            android:layout_centerVertical="true"
+            android:background="@drawable/solid_rectangle_15_f5f6f7"
+            android:drawableLeft="@mipmap/icon_search_b"
+            android:drawablePadding="@dimen/size8"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:focusable="true"
+            android:hint="搜索词条或游戏"
+            android:imeOptions="actionSearch"
+            android:paddingRight="@dimen/size50"
+            android:maxLength="10"
+            android:paddingStart="@dimen/size15"
+            android:singleLine="true"
+            android:textColor="@color/gray28"
+            android:textColorLink="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_cancel"
+            android:src="@mipmap/icon_close"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/size60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray28" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/llHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/size20"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size40"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableStart="@drawable/solid_rectangle_2_ffcc03"
+                    android:drawablePadding="@dimen/size4"
+                    android:padding="@dimen/size8"
+                    android:text="搜索历史"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16" />
+
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="@dimen/size50"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/icon_delete_black" />
+
+                <LinearLayout
+                    android:id="@+id/ll_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="@dimen/size15"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/tv_delete_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size8"
+                        android:text="全部删除"
+                        android:textSize="@dimen/textSize12" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="@dimen/size16"
+                        android:background="@color/color_line" />
+
+                    <TextView
+                        android:id="@+id/tv_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size8"
+                        android:text="完成"
+                        android:textColor="@color/color_ffcc03"
+                        android:textSize="@dimen/textSize12" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/size20"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"
+            app:srlEnableFooterFollowWhenLoadFinished="true"
+            app:srlEnableScrollContentWhenLoaded="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <com.scwang.smart.refresh.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="Translate"
+                app:srlAccentColor="@color/grayAA"
+                app:srlTextNothing="--- 人家是一只有底线的小脑斧 ---"
+                app:srlTextSizeTitle="@dimen/textSize12" />
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </FrameLayout>
+</LinearLayout>

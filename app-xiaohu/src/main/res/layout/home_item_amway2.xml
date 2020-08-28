@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg">
+
+    <CheckBox
+        android:id="@+id/cb_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/size10"
+        android:button="@drawable/collect_icon_checkbox"
+        android:gravity="center_vertical"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_marginBottom="@dimen/size7"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_10"
+            android:paddingLeft="@dimen/size10"
+            android:paddingTop="@dimen/size15"
+            android:paddingRight="@dimen/size10"
+            android:paddingBottom="@dimen/size5">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.tinytiger.common.view.title.AvatarView
+                    android:id="@+id/avUser"
+                    android:layout_width="@dimen/size50"
+                    android:layout_height="@dimen/size50"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/size10"
+                    app:TalentSize="@dimen/size50" />
+
+
+                <com.tinytiger.titi.widget.text.MedalTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/avUser"
+                    android:layout_toStartOf="@id/avAttention"
+                    android:paddingTop="@dimen/size5"
+                    android:text="@string/app_name"
+                    app:medal_textColor="@color/gray28"
+                    app:medal_textSize="@dimen/textSize14"
+                    app:medal_is_bold="true"/>
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/RadingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginTop="@dimen/size5"
+                    android:layout_toRightOf="@+id/avUser"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="2" />
+
+
+
+                <com.tinytiger.titi.widget.view.AttentionView
+                    android:id="@+id/avAttention"
+                    android:layout_width="@dimen/size70"
+                    android:layout_height="@dimen/size30"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/size10"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlGameInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size140"
+                android:layout_below="@+id/rl_top"
+                android:layout_marginTop="@dimen/size10">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivIcon1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+                    app:riv_border_width="0dip"
+                    app:riv_corner_radius="@dimen/size6"
+                    app:riv_oval="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size30"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/solid_rectangle_10_33000000_but" />
+
+                <TextView
+                    android:id="@+id/tvGameName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="@dimen/size15"
+                    android:paddingBottom="@dimen/size4"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tvGameSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:drawableRight="@mipmap/icon_right_w"
+                    android:drawablePadding="@dimen/size5"
+                    android:paddingRight="@dimen/size10"
+                    android:paddingBottom="@dimen/size4"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlGameInfo"
+                android:layout_marginTop="@dimen/size15"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <View
+                android:id="@+id/tab_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvTitle"
+                android:layout_alignTop="@id/recycler_tab" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_tab"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingTop="@dimen/size15"
+                android:paddingBottom="@dimen/size10"
+                android:text="@string/app_name"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize15"
+                android:textStyle="bold" />
+
+            <com.tinytiger.common.view.textview.ShowAllTextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/size15"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14"
+                android:layout_below="@+id/tvTitle"
+                app:maxShowLines="8"
+                app:leftMargin="@dimen/size25"
+                app:rightMargin="@dimen/size25"
+                app:rightMenuText="全文"
+                app:viewClick="false" />
+
+            <LinearLayout
+                android:id="@+id/llReply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDesc"
+                android:layout_marginBottom="@dimen/size15"
+                android:background="@drawable/solid_rectangle_5_f7f7f7"
+                android:orientation="vertical"
+                android:padding="@dimen/size10" />
+
+            <LinearLayout
+                android:id="@+id/ll_action"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size40"
+                android:layout_below="@+id/llReply">
+
+                <com.tinytiger.titi.widget.view.Anim.LikeView
+                    android:id="@+id/viewLike"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/size28" />
+
+                <View
+                    android:layout_width="@dimen/size1"
+                    android:layout_height="@dimen/size15"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_line" />
+
+                <TextView
+                    android:id="@+id/tvRead"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_read"
+                    android:drawablePadding="@dimen/size10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/size35"
+                    android:text="0"
+                    android:textColor="@color/gray66"
+                    android:textSize="@dimen/textSize13" />
+
+                <View
+                    android:layout_width="@dimen/size1"
+                    android:layout_height="@dimen/size15"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_line" />
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_share"
+                    android:drawablePadding="@dimen/size10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/size35"
+                    android:text="0"
+                    android:textColor="@color/gray66"
+                    android:textSize="@dimen/textSize13" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/rl_center"
+            android:padding="@dimen/size4"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize14"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/vLine1"
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size1"
+            android:layout_below="@+id/rl_center" />
+
+        <View
+            android:id="@+id/vLine2"
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size1" />
+
+        <View
+            android:id="@+id/vViewBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vLine1"
+            android:layout_below="@+id/vLine2" />
+
+    </RelativeLayout>
+</LinearLayout>

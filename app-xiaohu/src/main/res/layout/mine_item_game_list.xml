@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size90"
+    android:layout_marginLeft="@dimen/size20"
+    android:layout_marginRight="@dimen/size20">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size5"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/size10"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size60"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingRight="@dimen/size10"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="@dimen/size35"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon_more_g" />
+
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivMore"
+        android:layout_marginRight="@dimen/size65"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:lines="2"
+        android:paddingRight="@dimen/size10"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/tv_action"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/ivMore"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/solid_rectangle_15_ffcc03"
+        android:gravity="center"
+        android:text="查看"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line"
+        />
+</RelativeLayout>
+

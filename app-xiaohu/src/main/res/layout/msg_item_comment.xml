@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/size10">
+
+
+    <com.tinytiger.common.view.title.AvatarView
+        android:id="@+id/avUser"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/size15"
+        app:TalentSize="@dimen/size35" />
+
+
+    <ImageView
+        android:id="@+id/ivPoint"
+        android:layout_width="@dimen/size7"
+        android:layout_height="@dimen/size7"
+        android:layout_marginLeft="@dimen/size45"
+        android:src="@drawable/circle_eb5045" />
+
+    <com.tinytiger.titi.widget.text.MedalTextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tvTime"
+        android:layout_toRightOf="@+id/avUser"
+        android:paddingStart="@dimen/size12"
+        app:medal_is_bold="true"
+        app:medal_textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_toRightOf="@+id/avUser"
+        android:paddingLeft="@dimen/size12"
+        android:paddingTop="@dimen/size3"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize12" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivDateBg"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/size15"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/size10"
+        app:riv_oval="false" />
+
+
+    <TextView
+        android:id="@+id/tvDesc2"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@drawable/solid_rectangle_5_f2f2f2"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="3"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivVideo"
+        android:layout_width="@dimen/size20"
+        android:layout_height="@dimen/size20"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginRight="@dimen/size35"
+        android:src="@mipmap/icon_news_start"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ivDateBg"
+        android:paddingTop="@dimen/size2"
+        android:paddingRight="@dimen/size10"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <LinearLayout
+        android:id="@+id/llIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size25"
+        android:layout_below="@+id/tvDesc"
+        android:layout_marginTop="@dimen/size4"
+        android:layout_toRightOf="@+id/avUser"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size10"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDesc"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_toLeftOf="@+id/ivDateBg"
+        android:layout_toRightOf="@+id/avUser"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/size10">
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="@dimen/size200"
+            android:paddingLeft="@dimen/size12"
+            android:paddingTop="@dimen/size3"
+            android:text=""
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+        <TextView
+            android:id="@+id/tvInfo1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvInfo"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/size3"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@+id/llInfo"
+        android:background="@color/color_line" />
+</RelativeLayout>

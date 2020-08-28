@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tinytiger.common.view.title.TitleHomeView
+        android:id="@+id/thvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size70"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/size20"
+        android:paddingTop="@dimen/size30" />
+
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size40"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size30"
+        android:scaleType="center"
+        android:src="@mipmap/icon_search_yellor" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/thvTitle" />
+
+</RelativeLayout>

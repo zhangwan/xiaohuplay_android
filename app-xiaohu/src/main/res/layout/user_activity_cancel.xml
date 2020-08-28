@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+ >
+
+
+    <RelativeLayout
+        android:id="@+id/layout_apply"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.tinytiger.common.view.title.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size24"
+                android:src="@mipmap/icon_cancel_account" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注销须知"
+                android:padding="@dimen/size4"
+                android:textColor="@color/color_ffcc03"
+                android:textSize="@dimen/textSize18" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="@dimen/size30"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/size4"
+                android:text="您提交的注销申请生效前，请先确认以下信息，以保证您的账号安全："
+                android:padding="@dimen/size4"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize16" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/size16"
+                android:layout_marginEnd="@dimen/size30"
+                android:text="1、注销账号后，此账号的所有信息，包括收藏、浏览记录、私聊关系、关注与粉丝关系、聊天记录、勋章记录等。\n 2、绑定手机/微信/QQ账号将会解绑，解绑后可再次注册账号。"
+                android:padding="@dimen/size4"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_apply"
+            style="@style/MainButtonType"
+            android:layout_margin="@dimen/size16"
+            android:text="申请注销"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_success"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size24"
+                android:src="@mipmap/icon_cancel_account_ok" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注销须知"
+                android:padding="@dimen/size4"
+                android:textColor="@color/color_ffcc03"
+                android:textSize="@dimen/textSize18" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="@dimen/size30"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/size4"
+                android:text="您的账号已被注销，当前所有登录将被退出"
+                android:padding="@dimen/size4"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize16" />
+
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_complete"
+            style="@style/MainButtonType"
+            android:layout_margin="@dimen/size16"
+            android:text="我知道了"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

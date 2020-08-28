@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size30"
+        android:paddingTop="@dimen/size20"
+        android:text="请输入道具兑换码"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+
+    <EditText
+        android:id="@+id/et_send"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size200"
+        android:layout_marginLeft="@dimen/size30"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_marginRight="@dimen/size30"
+        android:background="@color/color_line"
+        android:digits="@string/digits_2"
+        android:gravity="left"
+        android:padding="@dimen/size10"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size30"
+        android:paddingTop="@dimen/size10"
+        android:text="输入多个兑换码需要使用换行隔开"
+        android:textColor="@color/color_FF2D2D"
+        android:textSize="@dimen/textSize12" />
+
+    <ImageView
+        android:id="@+id/ivIcon1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size125"
+        android:scaleType="center"
+        android:src="@mipmap/icon_search_props" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/btn_complete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:text="提交"
+            android:background="@drawable/solid_gradient_20_ffcc03"
+            android:textColor="@color/gray33"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/size24"
+            android:textSize="@dimen/textSize14"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

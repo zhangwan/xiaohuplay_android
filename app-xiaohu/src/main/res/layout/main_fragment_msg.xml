@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size70"
+        android:background="@color/white"
+        android:paddingTop="@dimen/size25"
+        android:gravity="center"
+        android:text="消息"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize18"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/messages_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size65"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="@dimen/size150"
+        android:layout_height="@dimen/size40"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/size180"
+        android:background="@drawable/solid_gradient_20_ffcc03"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="立即登录/注册"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize12"
+        android:visibility="gone" />
+</RelativeLayout>
+
+
+

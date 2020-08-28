@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.ms.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:delay_time="10000"
+        app:indicator_drawable_selected="@drawable/oval_ffcc03"
+        app:indicator_drawable_unselected="@drawable/oval_e2e2e2"
+        app:indicator_margin="@dimen/size25"
+        app:indicator_padding="@dimen/size8" />
+
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@mipmap/icon_start_r"
+        android:paddingLeft="@dimen/size20"
+        android:paddingTop="@dimen/size70"
+        android:paddingRight="@dimen/size20"
+        android:paddingBottom="@dimen/size20"
+        android:text="进入"
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize14"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/flProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/size70"
+            android:layout_height="@dimen/size70"
+            android:layout_gravity="center"
+            android:background="@drawable/solid_rectangle_8_white" />
+
+
+        <ProgressBar
+            android:id="@+id/mProgressView"
+            android:layout_width="@dimen/size20"
+            android:layout_height="@dimen/size20"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/progress_bg" />
+    </FrameLayout>
+
+
+
+</RelativeLayout>

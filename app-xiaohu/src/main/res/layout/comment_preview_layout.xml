@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size45"
+        android:gravity="center"
+        android:paddingLeft="@dimen/size15"
+        android:text="所有评论"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/size6">
+
+        <TextView
+            android:id="@+id/tvSelect1"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvSelect2"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最早"
+            android:textColor="@color/grayAA"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvSelect3"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最热"
+            android:textColor="@color/grayAA"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/color_line2" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_marginTop="@dimen/size45"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnableScrollContentWhenLoaded="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+</RelativeLayout>

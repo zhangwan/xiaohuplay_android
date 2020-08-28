@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size260"
+    android:layout_height="wrap_content"
+    android:background="@drawable/solid_rectangle_10_white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="@dimen/size80"
+        android:orientation="vertical"
+        android:padding="@dimen/size15">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextInfoType"
+            android:layout_marginBottom="@dimen/size15"
+            android:padding="@dimen/size2"
+            android:text="@string/tips"
+            android:textSize="@dimen/size16"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/size80"
+            android:layout_height="@dimen/size30"
+            android:background="@drawable/solid_rectangle_15_f5f6f7"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="@dimen/size80"
+            android:layout_height="@dimen/size30"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/solid_gradient_15_ffcc03"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+    </RelativeLayout>
+</LinearLayout>
+

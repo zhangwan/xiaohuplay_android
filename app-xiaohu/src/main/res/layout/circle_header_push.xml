@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size15"
+            android:text="我加入的圈子"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size50"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/icon_more_right_g"
+            android:drawablePadding="@dimen/size10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/size15"
+            android:text="查看更多"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize14"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:layout_below="@+id/tvName"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@color/color_line2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size125"
+            android:layout_below="@+id/tvName"
+            android:overScrollMode="never"
+            android:paddingLeft="@dimen/size5"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlMe2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size15"
+            android:text="推荐圈子"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMore1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size50"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/icon_more_right_g"
+            android:drawablePadding="@dimen/size10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/size15"
+            android:text="查看更多圈子"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:layout_below="@+id/tvMore1"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@color/color_line2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size110"
+            android:layout_below="@+id/tvMore1"
+            android:overScrollMode="never"
+            android:paddingLeft="@dimen/size10"
+            android:scrollbars="none" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size10"
+            android:layout_below="@+id/recycler_list1"
+            android:background="@color/color_f5f5f5" />
+    </RelativeLayout>
+
+
+</LinearLayout>

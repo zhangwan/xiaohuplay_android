@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_content"
+    android:background="@color/color_bg">
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size250"
+        android:scaleType="fitStart"
+        android:src="@mipmap/icon_home_game" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size40"
+        android:background="@color/transparent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:paddingLeft="@dimen/size15"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:id="@+id/ivSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size30"
+                android:layout_marginTop="@dimen/size5"
+                android:layout_toLeftOf="@+id/ivGames"
+                android:background="@drawable/solid_rectangle_white_30"
+                android:drawableLeft="@mipmap/icon_search_b"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size25"
+                android:text="搜索"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize10" />
+
+            <ImageView
+                android:id="@+id/ivGames"
+                android:layout_width="@dimen/size60"
+                android:layout_height="@dimen/size40"
+                android:layout_alignParentRight="true"
+                android:scaleType="center"
+                android:src="@mipmap/icon_game_list" />
+        </RelativeLayout>
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:paddingBottom="@dimen/size5"
+            android:paddingLeft="@dimen/size15" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/llDoing"
+        android:layout_width="@dimen/size280"
+        android:layout_height="wrap_content"
+        android:background="@drawable/solid_rectangle_2_ffffff">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivDoings"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size140"
+            android:scaleType="fitXY"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="@dimen/size2"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tvDoings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_marginRight="@dimen/size14"
+            android:background="@color/flashlight_bg"
+            android:paddingLeft="@dimen/size2"
+            android:paddingRight="@dimen/size2"
+            android:text="活动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/size8"
+            android:text=""
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+    </RelativeLayout>
+</merge>

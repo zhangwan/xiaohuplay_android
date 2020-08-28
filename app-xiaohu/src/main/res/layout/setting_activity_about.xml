@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:showLine="gone" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size80"
+        android:layout_height="@dimen/size80"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/size70"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:riv_border_width="0dip"
+        app:riv_corner_radius="@dimen/size2"
+        app:riv_oval="false" />
+
+
+    <com.tinytiger.common.view.text.BaseItemLayout
+        android:id="@+id/bilShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size180"
+        app:titleText="点击分享好友" />
+
+    <com.tinytiger.common.view.text.BaseItemLayout
+        android:id="@+id/item_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bilShare"
+        app:titleText="给我们评分" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size15"
+            android:text="关注我们" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <ImageView
+                android:id="@+id/ivIcon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size10"
+                android:src="@mipmap/icon_share_wx" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivIcon1"
+                android:text="微信公众号"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tvInfo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="小虎Hoo"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <ImageView
+                android:id="@+id/ivIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size10"
+                android:src="@mipmap/icon_share_wb" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivIcon2"
+                android:text="新浪微博"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tvInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="小虎Hoo"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <ImageView
+                android:id="@+id/ivIcon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size10"
+                android:src="@mipmap/icon_share_bb" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivIcon3"
+                android:text="bilibili"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tvInfo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="小虎Hoo"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <ImageView
+                android:id="@+id/ivIcon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size10"
+                android:src="@mipmap/icon_share_tt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ivIcon4"
+                android:text="今日头条"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tvInfo4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="小虎Hoo"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvUserProtocol"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:gravity="center"
+            android:text="《小虎Hoo用户协议和隐私政策》"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize14" />
+
+    </LinearLayout>
+</RelativeLayout>

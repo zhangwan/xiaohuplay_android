@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/icon_talent_bg2"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_marginTop="@dimen/size40"
+        android:scaleType="center"
+        android:src="@mipmap/icon_back_w" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size60"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size40"
+        android:gravity="center"
+        android:text="达人认证"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize18" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_back"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_talent_on" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_back"
+        android:layout_marginTop="@dimen/size100"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llComment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size200"
+                android:layout_marginLeft="@dimen/size35"
+                android:layout_marginRight="@dimen/size35"
+                android:paddingLeft="@dimen/size20"
+                android:paddingRight="@dimen/size20"
+                android:background="@mipmap/bg2_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size45"
+                    android:gravity="center"
+                    android:text="申请条件"
+                    android:textColor="@color/color_3d791da"
+                    android:textSize="@dimen/textSize18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/color_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size35">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_talent_works"
+                        android:drawablePadding="@dimen/size5"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/gray99"
+                        android:text="发布作品数量≥30条"
+                        android:textSize="@dimen/textSize12" />
+
+                    <ImageView
+                        android:id="@+id/ivCondition1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/talent_icon_nor"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size35">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/icon_talent_like"
+                        android:drawablePadding="@dimen/size5"
+                        android:textColor="@color/gray99"
+                        android:text=" 获赞数量≥100赞"
+                        android:textSize="@dimen/textSize12" />
+
+                    <ImageView
+                        android:id="@+id/ivCondition2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/talent_icon_nor"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size35">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/icon_talent_fans"
+                        android:drawablePadding="@dimen/size5"
+                        android:textColor="@color/gray99"
+                        android:text="粉丝数≥50个"
+                        android:textSize="@dimen/textSize12" />
+
+                    <ImageView
+                        android:id="@+id/ivCondition3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/talent_icon_nor"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size35">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/icon_talent_awesome"
+                        android:drawablePadding="@dimen/size5"
+                        android:textColor="@color/gray99"
+                        android:text=" 连续活跃7天"
+                        android:textSize="@dimen/textSize12" />
+
+                    <ImageView
+                        android:id="@+id/ivCondition4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/talent_icon_nor"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llComment2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size200"
+                android:layout_below="@+id/llComment"
+                android:layout_marginLeft="@dimen/size35"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_marginRight="@dimen/size35"
+                android:background="@mipmap/bg2_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size45"
+                    android:gravity="center"
+                    android:text="认证特权"
+                    android:textColor="@color/color_3d791da"
+                    android:textSize="@dimen/textSize18" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/size45"
+                            android:layout_height="@dimen/size45"
+                            android:src="@mipmap/icon_talent_p1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/size10"
+                            android:text="站内达人标识"
+                            android:textColor="@color/gray33"
+                            android:textSize="@dimen/textSize16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/size10"
+                            android:text="官方认证达人"
+                            android:textColor="@color/gray99"
+                            android:textSize="@dimen/textSize14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/size45"
+                            android:layout_height="@dimen/size45"
+                            android:src="@mipmap/icon_talent_more" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/size10"
+                            android:text="更多特权"
+                            android:textColor="@color/gray33"
+                            android:textSize="@dimen/textSize16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/size10"
+                            android:text="正在开放中"
+                            android:textColor="@color/gray99"
+                            android:textSize="@dimen/textSize14" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llComment"
+                android:layout_marginLeft="@dimen/size45"
+                android:layout_marginTop="-15dp"
+                android:src="@mipmap/icon_talent_condition_line" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llComment"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-15dp"
+                android:layout_marginRight="@dimen/size45"
+                android:src="@mipmap/icon_talent_condition_line" />
+
+            <TextView
+                android:id="@+id/btn_complete"
+                android:layout_height="@dimen/size40"
+                android:layout_width="@dimen/size200"
+                android:gravity="center"
+                android:layout_below="@+id/llComment2"
+                android:background="@drawable/solid_rectangle_20_f7f7f7"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/size60"
+                android:textColor="@color/gray33"
+                android:layout_marginBottom="@dimen/size60"
+                android:text="申请认证站内达人" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
+

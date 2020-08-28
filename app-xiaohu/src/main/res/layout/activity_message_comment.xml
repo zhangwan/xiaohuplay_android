@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_view">
+
+
+        <com.tinytiger.common.view.title.AvatarView
+            android:id="@+id/avUser"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_marginRight="@dimen/size10"
+            app:TalentSize="@dimen/size40" />
+
+        <com.tinytiger.titi.widget.text.MedalTextView
+            android:id="@+id/comment_item_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:layout_toRightOf="@+id/avUser"
+            app:medal_textColor="@color/gray99"
+            app:medal_textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/comment_item_more"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size25"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size15"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size8"
+            android:paddingRight="@dimen/size15"
+            android:text="删除"
+            android:textColor="@color/color_ff556e"
+            android:textSize="@dimen/textSize14"
+            android:visibility="visible" />
+        <TextView
+            android:id="@+id/comment_item_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size8"
+            android:layout_marginTop="@dimen/size23"
+            android:layout_toEndOf="@id/comment_item_userName"
+            android:background="@drawable/stroke_rectangle_2_ffcc03"
+            android:paddingStart="@dimen/size4"
+            android:paddingTop="@dimen/size1"
+            android:paddingEnd="@dimen/size4"
+            android:paddingBottom="@dimen/size1"
+            android:text="@string/author"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize9"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/comment_item_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size8"
+            android:layout_marginTop="@dimen/size20"
+            android:layout_toEndOf="@id/comment_item_author"
+            android:src="@mipmap/icon_hot"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/comment_item_content"
+            style="@style/TextMainType"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/avUser"
+            android:layout_toRightOf="@+id/avUser"
+            android:gravity="start"
+            android:paddingTop="@dimen/size5"
+            android:paddingRight="@dimen/size15" />
+
+        <TextView
+            android:id="@+id/comment_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size40"
+            android:layout_below="@+id/comment_item_content"
+            android:layout_toRightOf="@+id/avUser"
+            android:gravity="center"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+        <com.tinytiger.titi.widget.view.Anim.LikeView
+            android:id="@+id/viewLike"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size40"
+            android:layout_below="@+id/comment_item_content"
+            android:layout_alignParentEnd="true"
+            app:like_nor="@mipmap/icon_like_nor"
+            app:like_sel="@mipmap/icon_like_sel" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size10"
+            android:layout_below="@+id/comment_item_time"
+            android:background="@color/color_line2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size40"
+            android:layout_below="@+id/comment_item_time"
+            android:layout_marginTop="@dimen/size10"
+            android:gravity="center"
+            android:paddingLeft="@dimen/size15"
+            android:text="全部回复"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16" />
+    </RelativeLayout>
+
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/ll_content"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnableScrollContentWhenLoaded="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/et_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size12"
+            android:layout_marginTop="@dimen/size6"
+            android:layout_marginBottom="@dimen/size6"
+            android:layout_weight="1"
+            android:background="@drawable/solid_rectangle_20_f7f7f7"
+            android:focusable="true"
+            android:hint="悄咪咪的说几句…"
+            android:maxLength="1000"
+            android:minHeight="@dimen/size40"
+            android:paddingStart="@dimen/size15"
+            android:paddingEnd="@dimen/size15"
+            android:singleLine="true"
+            android:textColor="@color/gray28"
+            android:textColorLink="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/stroke_rectangle_15_aaaaaa"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+</RelativeLayout>

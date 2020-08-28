@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size100">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_empty" />
+
+    <TextView
+        android:id="@+id/empty_view_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/size50"
+        android:text="@string/empty_view_hint"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize18" />
+
+    <TextView
+        android:id="@+id/tvAddGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size20"
+        android:text="点击此处收录此游戏"
+        android:textColor="@color/color_0fb50a"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/btn_complete"
+        android:layout_width="@dimen/size160"
+        android:layout_height="@dimen/size40"
+        android:visibility="gone"
+        android:background="@drawable/solid_gradient_20_ffcc03"
+        android:gravity="center"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14"
+        android:text="提交申请" />
+
+</LinearLayout>

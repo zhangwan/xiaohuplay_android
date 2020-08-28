@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivLine1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginTop="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@mipmap/comment_top" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@mipmap/comment_during"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size15"
+        android:paddingTop="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:paddingBottom="@dimen/size10">
+
+
+        <com.tinytiger.common.view.title.AvatarView
+            android:id="@+id/avUser"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            app:TalentSize="@dimen/size40" />
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size15"
+            android:src="@mipmap/icon_more_g" />
+
+        <com.tinytiger.titi.widget.text.MedalTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/iv_more"
+            android:layout_toEndOf="@+id/avUser"
+            android:paddingLeft="@dimen/size10"
+            android:paddingTop="@dimen/size10"
+            app:medal_is_bold="true"
+            app:medal_textColor="@color/gray28"
+            app:medal_textSize="@dimen/textSize14" />
+
+
+        <com.tinytiger.common.view.textview.ShowAllTextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avUser"
+            android:paddingTop="@dimen/size15"
+            android:paddingBottom="@dimen/size15"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            app:leftMargin="@dimen/size30"
+            app:rightMargin="@dimen/size30"
+            app:maxShowLines="5"
+            app:rightMenuText="展开全部" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInfo"
+            android:drawablePadding="@dimen/size10"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/size4"
+            android:text="0小时前"
+            android:textColor="@color/gray66"
+            android:textSize="@dimen/textSize11" />
+
+        <com.tinytiger.titi.widget.view.Anim.LikeView
+            android:id="@+id/viewLike"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size40"
+            android:layout_below="@+id/tvInfo"
+            android:layout_marginTop="-10dp"
+            android:layout_toLeftOf="@+id/tvRead"
+            android:drawableLeft="@mipmap/icon_like" />
+
+        <TextView
+            android:id="@+id/tvRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInfo"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/icon_read"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:textColor="@color/gray66"
+            android:textSize="@dimen/textSize13" />
+
+
+        <LinearLayout
+            android:id="@+id/llComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTime"
+            android:layout_marginTop="@dimen/size15"
+            android:background="@drawable/solid_rectangle_5_f7f7f7"
+            android:orientation="vertical"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivLine2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@mipmap/comment_bottom" />
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_marginLeft="@dimen/size30"
+        android:layout_marginRight="@dimen/size30"
+        android:background="@color/color_line" />
+</LinearLayout>

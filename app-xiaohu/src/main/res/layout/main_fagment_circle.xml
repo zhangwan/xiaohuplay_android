@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.tinytiger.common.view.title.TitleCiecleView
+        android:id="@+id/thvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size70"
+        android:paddingLeft="@dimen/size20"
+        android:paddingTop="@dimen/size30" />
+
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size40"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size30"
+        android:scaleType="center"
+        android:src="@mipmap/icon_search_g" />
+
+    <ImageView
+        android:id="@+id/ivMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size40"
+        android:layout_marginTop="@dimen/size30"
+        android:layout_toLeftOf="@+id/ivSearch"
+        android:paddingLeft="@dimen/size20"
+        android:scaleType="center"
+        android:src="@mipmap/icon_msg" />
+
+    <ImageView
+        android:id="@+id/ivMsg1"
+        android:layout_width="@dimen/size7"
+        android:layout_height="@dimen/size7"
+        android:layout_marginTop="38dp"
+        android:layout_toLeftOf="@+id/ivSearch"
+        android:background="@drawable/solid_rectangle_15_ff556e"
+        android:visibility="gone" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/thvTitle" />
+
+    <com.tinytiger.titi.widget.view.ViewDragFrameLayout
+        android:id="@+id/fl_drag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/size15"
+            android:layout_marginBottom="@dimen/size60"
+            android:scaleType="center"
+            android:src="@mipmap/icon_circle_send" />
+    </com.tinytiger.titi.widget.view.ViewDragFrameLayout>
+</RelativeLayout>

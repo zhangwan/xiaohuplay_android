@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size10"
+    android:paddingBottom="@dimen/size15">
+
+<!--    <com.ms.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:delay_time="4500"
+        app:indicator_drawable_selected="@drawable/dot_ffcc03_5"
+        app:indicator_drawable_unselected="@drawable/dot_e3e3e3"
+        />-->
+    <com.to.aboomy.pager2banner.Banner
+        android:id="@+id/banner2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size405"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50">
+
+        <LinearLayout
+            android:id="@+id/tvTitle1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/size20"
+            android:background="@drawable/solid_rectangle_5_fff7f7f7"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/game_type" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="游戏分类"
+                android:layout_marginStart="@dimen/size10"
+                android:textColor="@color/gray33"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/size10"
+            android:layout_height="@dimen/size1" />
+
+        <LinearLayout
+            android:id="@+id/tvTitle2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/size20"
+            android:background="@drawable/solid_rectangle_5_fff7f7f7"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ranklist" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="排行榜"
+                android:layout_marginStart="@dimen/size10"
+                android:textColor="@color/gray33"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size10"
+        android:background="#F9F9F9"
+        android:layout_marginTop="@dimen/size15"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size20"
+        />
+
+</LinearLayout>

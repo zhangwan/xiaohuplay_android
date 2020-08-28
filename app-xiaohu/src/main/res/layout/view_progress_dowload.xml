@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size30"
+    android:id="@+id/rlContent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_download" />
+
+    <TextView
+        android:id="@+id/tvDownload"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size30"
+        android:gravity="center"
+        android:paddingRight="@dimen/size15"
+        android:paddingLeft="@dimen/size15"
+        android:text="下载"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size15"
+    tools:ignore="MissingConstraints"
+    android:id="@+id/layout"
+    >
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:background="#F2F2F2" />
+
+    <ImageView
+        android:id="@+id/ivIconBg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size140"
+        android:layout_marginTop="@dimen/size14"
+        android:layout_below="@id/view_line"
+        android:layout_marginStart="@dimen/size20"
+        android:layout_marginEnd="@dimen/size20"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/view_line" />
+
+    <TextView
+        android:id="@+id/tvRecommendTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_b3ffffff"
+        android:paddingLeft="@dimen/size5"
+        android:paddingTop="@dimen/size2"
+        android:paddingEnd="@dimen/size5"
+        android:paddingBottom="@dimen/size2"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/text_size_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/size35"
+        android:layout_marginTop="@dimen/size25"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/size20"
+        android:layout_marginTop="@dimen/size10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivIconBg">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/size48"
+            android:layout_height="@dimen/size48"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/size10"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="14dp"
+
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tvGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size10"
+            android:layout_marginTop="@dimen/size15"
+            android:text="刺激战场"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize15"
+            app:layout_constraintStart_toEndOf="@id/ivLogo" />
+
+        <TextView
+            android:id="@+id/tvGameDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size10"
+            android:layout_marginTop="@dimen/size5"
+            android:text="来自编辑推荐"
+            android:textColor="@color/color_8b8b8b"
+            android:textSize="@dimen/textSize12"
+            app:layout_constraintStart_toEndOf="@id/ivLogo"
+            app:layout_constraintTop_toBottomOf="@id/tvGameName" />
+
+        <ImageView
+            android:id="@+id/ivSecondPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size15"
+            android:layout_marginBottom="@dimen/size15"
+            android:src="@mipmap/item_second_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/size20"
+            app:layout_constraintTop_toBottomOf="@id/tvGameName"
+            app:layout_constraintTop_toTopOf="@id/tvGameName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_8b8b8b"
+        android:textSize="@dimen/textSize12"
+        android:text="来自广告"
+        android:layout_marginStart="@dimen/size20"
+        android:layout_marginTop="@dimen/size15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivIconBg"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

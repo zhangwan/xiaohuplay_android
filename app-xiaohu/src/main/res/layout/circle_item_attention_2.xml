@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size60"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size10"
+    android:paddingBottom="@dimen/size10"
+    android:paddingRight="@dimen/size15">
+
+    <com.tinytiger.common.view.title.AvatarView
+        android:id="@+id/avUser"
+        android:layout_width="@dimen/size40"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_height="@dimen/size40"
+        app:TalentSize="@dimen/size40" />
+
+
+    <com.tinytiger.titi.widget.text.MedalTextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size80"
+        android:layout_toEndOf="@+id/avUser"
+        app:medal_is_bold="true"
+        app:medal_textSize="@dimen/textSize14" />
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/size80"
+        android:layout_toRightOf="@+id/avUser"
+        android:text="@string/app_name"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+
+    <com.tinytiger.titi.widget.view.AttentionView
+        android:id="@+id/tvAttention"
+        android:layout_width="@dimen/size70"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_height="@dimen/size30"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

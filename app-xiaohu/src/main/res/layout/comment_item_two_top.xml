@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.tinytiger.common.view.title.AvatarView
+        android:id="@+id/avUser"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        app:TalentSize="@dimen/size35" />
+
+    <com.tinytiger.titi.widget.text.MedalTextView
+        android:id="@+id/comment_item_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size15"
+        android:layout_toEndOf="@+id/avUser"
+        app:medal_textColor="@color/gray33"
+        app:medal_is_bold="true"
+        app:medal_textSize="@dimen/textSize14" />
+
+
+    <ImageView
+        android:id="@+id/comment_item_more"
+        android:layout_width="@dimen/size50"
+        android:layout_height="@dimen/size35"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon_delete_black" />
+
+    <TextView
+        android:id="@+id/comment_item_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_marginTop="@dimen/size18"
+        android:layout_toEndOf="@id/comment_item_userName"
+        android:background="@drawable/stroke_rectangle_2_ffcc03"
+        android:paddingStart="@dimen/size4"
+        android:paddingTop="@dimen/size1"
+        android:paddingEnd="@dimen/size4"
+        android:paddingBottom="@dimen/size1"
+        android:text="@string/author"
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize9"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/comment_item_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_marginTop="@dimen/size18"
+        android:layout_toEndOf="@id/comment_item_author"
+        android:src="@mipmap/icon_hot"
+        android:visibility="gone" />
+
+    <com.tinytiger.common.view.textview.ShowAllTextView
+        android:id="@+id/satvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_item_userName"
+        android:layout_toRightOf="@+id/avUser"
+        android:paddingTop="@dimen/size7"
+        android:paddingRight="@dimen/size15"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14"
+        app:maxShowLines="1000"
+        app:renewViewClick="true"
+        app:rightMenuText="全文"
+        app:viewClick="true" />
+
+    <TextView
+        android:id="@+id/comment_item_time"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/textSize12"
+        android:textColor="@color/gray99"
+        android:layout_height="@dimen/size40"
+        android:layout_toRightOf="@+id/avUser"
+        android:layout_below="@+id/satvDesc"
+        android:paddingTop="@dimen/size15" />
+
+    <com.tinytiger.titi.widget.view.Anim.LikeView
+        android:id="@+id/viewLike"
+        android:layout_width="@dimen/size50"
+        android:layout_height="@dimen/size40"
+        app:like_nor="@mipmap/icon_like_nor"
+        app:like_sel="@mipmap/icon_like_sel"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_below="@+id/satvDesc"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size10"
+        android:layout_below="@id/comment_item_time"
+        android:background="@color/grayF9" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        android:layout_below="@id/comment_item_time"
+        android:layout_marginTop="@dimen/size10"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:paddingLeft="@dimen/size15"
+        android:text="全部回复(0)"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size45"
+        android:layout_below="@id/comment_item_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/size6">
+
+        <TextView
+            android:id="@+id/tvSelect1"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvSelect2"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最早"
+            android:textColor="@color/grayAA"
+            android:textSize="@dimen/textSize14" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvSelect3"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="最热"
+            android:textColor="@color/grayAA"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+</RelativeLayout>

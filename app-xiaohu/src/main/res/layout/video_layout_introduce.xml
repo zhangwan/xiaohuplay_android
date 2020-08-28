@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/size16"
+        android:paddingTop="@dimen/size16"
+        android:paddingEnd="@dimen/size16"
+        android:paddingBottom="@dimen/size15">
+
+        <!--    <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/size40"
+                android:layout_height="@dimen/size40"
+                android:scaleType="centerCrop"
+                app:riv_oval="true" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.tinytiger.common.view.title.AvatarView
+                android:id="@+id/avUser"
+                android:layout_width="@dimen/size40"
+                android:layout_height="@dimen/size40"
+                app:TalentSize="@dimen/size40" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.tinytiger.titi.widget.text.MedalTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:medal_textColor="@color/gray33"
+                    app:medal_textSize="@dimen/textSize14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size12"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_news_video_num"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_read_num"
+                        style="@style/TextInfoType"
+                        android:layout_marginLeft="@dimen/size3"
+                        android:textColor="@color/gray99"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_read_num"
+                        android:layout_width="@dimen/size12"
+                        android:layout_height="@dimen/size12"
+                        android:layout_marginTop="1dp"
+                        android:src="@mipmap/ic_video_time" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/TextInfoType"
+                        android:layout_marginStart="@dimen/size3"
+                        android:textColor="@color/gray99" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvAttention"
+                android:layout_width="@dimen/size60"
+                android:layout_height="@dimen/size28"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/size5"
+                android:layout_marginBottom="@dimen/size5"
+                android:layout_toRightOf="@+id/tv_name"
+                android:background="@drawable/stroke_rectangle_16_ffcc03"
+                android:gravity="center"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10"
+                android:text="解除拉黑"
+                android:textColor="@color/color_ffcc03"
+                android:textSize="@dimen/textSize10" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size8"
+                android:src="@mipmap/icon_more_g"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_marginBottom="@dimen/size10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/TextMainType"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:padding="@dimen/size4" />
+
+                <ImageView
+                    android:id="@+id/iv_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size8"
+                    android:src="@mipmap/icon_down_black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_introduce"
+                style="@style/TextInfoType"
+                android:layout_gravity="start"
+                android:padding="@dimen/size4"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.tinytiger.titi.widget.view.Anim.LikeView
+                        android:id="@+id/viewLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size40"
+                        android:background="@drawable/solid_rectangle_20_f9f9f9"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/size5"
+                        android:paddingRight="@dimen/size15" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_comment_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/size5"
+                        android:background="@drawable/solid_rectangle_20_f9f9f9"
+                        android:drawableLeft="@mipmap/icon_read"
+                        android:drawablePadding="@dimen/size5"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/size15"
+                        android:paddingRight="@dimen/size15"
+                        android:textColor="@color/gray66"
+                        android:textSize="@dimen/size13" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_share_num"
+                        style="@style/TextInfoType"
+                        android:layout_height="@dimen/size40"
+                        android:layout_marginStart="@dimen/size6"
+                        android:background="@drawable/solid_rectangle_20_f9f9f9"
+                        android:drawableStart="@mipmap/icon_share"
+                        android:drawablePadding="@dimen/size4"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/size15"
+                        android:paddingRight="@dimen/size15" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+</LinearLayout>

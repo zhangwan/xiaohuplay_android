@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size55"
+    android:paddingRight="@dimen/size15"
+ >
+
+
+    <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size15"
+        android:src="@mipmap/icon_check2_sel"
+        />
+
+    <com.tinytiger.common.view.title.AvatarView
+        android:id="@+id/avUser"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_marginLeft="@dimen/size60"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size10"
+        app:TalentSize="@dimen/size40" />
+
+
+    <com.tinytiger.titi.widget.text.MedalTextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/avUser"
+        app:medal_textColor="@color/gray99"
+        app:medal_textSize="@dimen/textSize14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_marginLeft="@dimen/size60"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line2"/>
+</RelativeLayout>

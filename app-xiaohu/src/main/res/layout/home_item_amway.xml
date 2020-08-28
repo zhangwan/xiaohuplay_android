@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/size15"
+    android:layout_marginTop="@dimen/size10"
+    android:layout_marginEnd="@dimen/size10"
+    android:background="@mipmap/bg_10"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size15"
+    android:paddingRight="@dimen/size15"
+    android:paddingBottom="@dimen/size5">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/size10">
+
+        <com.tinytiger.common.view.title.AvatarView
+            android:id="@+id/avUser"
+            android:layout_width="@dimen/size45"
+            android:layout_height="@dimen/size45"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/size10"
+            app:TalentSize="@dimen/size45" />
+
+
+        <com.tinytiger.titi.widget.text.MedalTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/avAttention"
+            android:layout_toEndOf="@+id/avUser"
+            android:paddingRight="@dimen/size5"
+            android:paddingTop="@dimen/size3"
+            app:medal_is_bold="true"
+            app:medal_textSize="@dimen/textSize14" />
+
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginTop="@dimen/size5"
+            android:layout_toRightOf="@+id/avUser"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="2" />
+
+        <com.tinytiger.titi.widget.view.AttentionView
+            android:id="@+id/avAttention"
+            android:layout_width="@dimen/size70"
+            android:layout_height="@dimen/size30"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size10"
+         />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlGameInfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size120"
+        android:layout_below="@+id/rl_top">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="@dimen/size6"
+            app:riv_oval="false" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size30"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/solid_rectangle_6_33000000_but" />
+
+        <TextView
+            android:id="@+id/tvGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="@dimen/size10"
+            android:paddingBottom="@dimen/size4"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tvGameSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:drawableRight="@mipmap/icon_right_w"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center"
+            android:paddingRight="@dimen/size10"
+            android:paddingBottom="@dimen/size4"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize14" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_tab"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingTop="@dimen/size10"
+        android:paddingBottom="@dimen/size5"
+        android:text="@string/app_name"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize15"
+        android:textStyle="bold" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlGameInfo"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+    <com.tinytiger.common.view.textview.ShowAllTextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:paddingBottom="@dimen/size10"
+        android:paddingTop="@dimen/size5"
+        android:text="@string/app_name"
+        android:textColor="@color/gray33"
+        android:lineSpacingMultiplier="1.3"
+        android:lineSpacingExtra="2dp"
+        android:textSize="@dimen/textSize14"
+        app:leftMargin="@dimen/size25"
+        app:rightMargin="@dimen/size25"
+        app:maxShowLines="8"
+        app:rightMenuText="全文"
+        app:viewClick="false" />
+
+    <LinearLayout
+        android:id="@+id/llReply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDesc"
+        android:background="@drawable/solid_rectangle_5_f7f7f7"
+        android:orientation="vertical"
+        android:padding="@dimen/size10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:layout_below="@+id/llReply">
+
+        <com.tinytiger.titi.widget.view.Anim.LikeView
+            android:id="@+id/viewLike"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/size20" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvRead"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_read"
+            android:drawablePadding="@dimen/size10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size35"
+            android:text="0"
+            android:textColor="@color/gray66"
+            android:textSize="@dimen/textSize13" />
+
+        <View
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size15"
+            android:layout_gravity="center_vertical"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_share"
+            android:drawablePadding="@dimen/size10"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size35"
+            android:text="0"
+            android:textColor="@color/gray66"
+            android:textSize="@dimen/textSize13" />
+    </LinearLayout>
+</LinearLayout>

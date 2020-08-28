@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size24"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginEnd="@dimen/size24"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size4"
+            android:text="选择建议类型"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize16" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size25"
+            android:padding="@dimen/size4"
+            android:text="输入您的建议内容："
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size180"
+            android:layout_marginTop="@dimen/size16"
+            android:background="@drawable/solid_rectangle_10_white"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start"
+                android:maxLength="300"
+                android:padding="@dimen/size8"
+                android:textColor="@color/gray66"
+                android:textSize="@dimen/textSize12" />
+
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/size6"
+                android:textColor="@color/gray66"
+                android:textSize="@dimen/textSize12" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/iv_submit"
+            android:layout_width="@dimen/size220"
+            android:layout_height="@dimen/size45"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size50"
+            android:background="@drawable/solid_rectangle_24_ffcc03_linear"
+            android:gravity="center"
+            android:text="发表意见"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

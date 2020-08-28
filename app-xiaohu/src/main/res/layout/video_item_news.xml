@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/size15"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/size120"
+            android:layout_height="67dp"
+            android:scaleType="centerCrop"
+            android:src="@color/white"
+            app:riv_corner_radius="@dimen/size5"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="@dimen/size4"
+            android:background="@drawable/solid_rectangle_80000000"
+            android:padding="@dimen/size2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize10" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/size3"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/size14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size12"
+                android:layout_height="@dimen/size12"
+                android:src="@mipmap/ic_news_person" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextInfoType"
+                android:layout_marginStart="@dimen/size3" />
+
+            <ImageView
+                android:id="@+id/iv_read_num"
+                android:layout_width="@dimen/size12"
+                android:layout_height="@dimen/size12"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginTop="1dp"
+                android:src="@mipmap/icon_read_g"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_read_num"
+                style="@style/TextInfoType"
+                android:layout_marginStart="@dimen/size3"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

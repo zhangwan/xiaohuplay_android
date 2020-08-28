@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/size15"
+    android:layout_marginTop="@dimen/size15"
+    android:layout_marginBottom="@dimen/size5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/llContent"
+    >
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="14dp"
+        app:riv_oval="false" />
+     <TextView
+         android:id="@+id/tv_name"
+         android:layout_width="@dimen/size70"
+         android:layout_height="wrap_content"
+         android:textSize="@dimen/text_size_12"
+         android:text="站双帕弥撒"
+         android:ellipsize="end"
+         android:lines="1"
+         android:layout_marginTop="@dimen/size5"
+         android:textColor="@color/gray2A2A28"
+         />
+
+</LinearLayout>

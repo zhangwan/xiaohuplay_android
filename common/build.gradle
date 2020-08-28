@@ -1,0 +1,97 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // android 选项 下面 添加lint 检测设置
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.alibaba:fastjson:1.2.47'
+    //权限
+    implementation 'com.yanzhenjie:permission:2.0.3'
+    //log
+    implementation 'com.orhanobut:logger:2.1.1'
+
+    //七牛云
+    implementation 'com.qiniu:qiniu-android-sdk:7.4.3'
+    //implementation 'com.qiniu:qiniu-android-sdk:7.3.15'
+    //implementation 'com.qiniu:qiniu-android-sdk:7.6.3'
+    //webview
+
+    implementation files('libs/tbs_sdk_thirdapp_v4.3.0.3_43903.jar')
+
+    implementation 'com.umeng.umsdk:common:9.1.0' // (必选)
+    //implementation  'com.umeng.umsdk:analytics:8.1.6'
+    api 'com.github.bumptech.glide:glide:4.9.0'
+
+    //banner
+    implementation 'com.ms:Banner-androidx:2.3.19'
+    //指示器Indicator
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //刷新控件
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'    //经典刷新头
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.0-alpha-1'    //经典加载
+    //头像框控件
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+   // implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    //滚轮
+    api 'com.github.zyyoona7:wheelview:1.0.7'
+    implementation 'com.github.duanhong169:picker-view:1.0.1'
+
+    // 网络请求库
+    implementation rootProject.ext.networkLibs
+    // RxJava2
+    implementation rootProject.ext.rxJavaLibs
+
+    //事件通知
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.jsoup:jsoup:1.12.1'
+
+    //html 解析
+    implementation 'org.apache.commons:commons-lang3:3.7'
+
+    //滑动返回
+    implementation 'cn.bingoogolapple:bga-swipebacklayout:2.0.1'
+
+    //浏览长图
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+
+    //图片请求
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+}

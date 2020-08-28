@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_content"
+    android:background="@drawable/solid_rectangle_10_white"
+    android:orientation="vertical"
+    android:padding="@dimen/size20">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/icon_wiki_bg"
+        android:gravity="center"
+        android:text="申请通道"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/size15"
+        android:paddingBottom="@dimen/size15"
+        android:text="请认真填写一下信息，我们会对您的信息进行审核，并在七个工作日内回复。相关结果会通过小精灵私信发送给您！期待您的接入！"
+        android:textColor="@color/gray66"
+        android:textSize="@dimen/textSize14" />
+
+    <LinearLayout
+        android:id="@+id/ll_content1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size15"
+            android:paddingBottom="@dimen/size20"
+            android:text="您想申请创建百科的游戏名称："
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGameName"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:paddingLeft="@dimen/size10"
+            android:textColor="@color/gray33"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textSize12"
+            android:background="@drawable/solid_rectangle_5_f0f0ef"
+            android:layout_height="@dimen/size40"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size30"
+            android:paddingBottom="@dimen/size20"
+            android:text="你对该游戏的认识："
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_text1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size140"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/solid_rectangle_5_f0f0ef"
+            android:gravity="start"
+            android:hint="请介绍您对该游戏的理解，让我们知道您对这个游戏的了解程度，写上玩游戏的经历更加分哦~"
+            android:maxLength="200"
+            android:padding="@dimen/size10"
+            android:textColorHint="@color/grayAA"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size30"
+            android:paddingBottom="@dimen/size20"
+            android:text="您的联系方式："
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_text2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/solid_rectangle_5_f0f0ef"
+            android:gravity="center_vertical"
+            android:hint="QQ或微信"
+            android:maxLength="30"
+            android:paddingLeft="@dimen/size10"
+            android:textColorHint="@color/grayAA"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize12" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            android:text="你在该游戏的游戏时长大概为："
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.LineWrapRadioGroup
+            android:id="@+id/radiogroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <RadioButton
+                android:id="@+id/radiogroup1_se1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="A.2小时内"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup1_se2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="B.2-20小时"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup1_se3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="C.20小时以上"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </com.tinytiger.common.view.LineWrapRadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            android:text="您是否参与类似的编辑？"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.LineWrapRadioGroup
+            android:id="@+id/radiogroup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <RadioButton
+                android:id="@+id/radiogroup2_se1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="A.完全没有"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup2_se2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="B.有一些经验"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup2_se3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="C.参与过且比较熟悉"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </com.tinytiger.common.view.LineWrapRadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            android:text="您每周有多少时间拿来做百科？"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.LineWrapRadioGroup
+            android:id="@+id/radiogroup3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <RadioButton
+                android:id="@+id/radiogroup3_se1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="A.＜7小时"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup3_se2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="B.7-14小时"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup3_se3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="C.＞14小时"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </com.tinytiger.common.view.LineWrapRadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            android:text="如果成为管理员，最快什么时候可以开始编辑呢？"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.LineWrapRadioGroup
+            android:id="@+id/radiogroup4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <RadioButton
+                android:id="@+id/radiogroup4_se1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="A.随时可以"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup4_se2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="B.三天内"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup4_se3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="C.一周左右时间再议"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </com.tinytiger.common.view.LineWrapRadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            android:text="你的年龄是："
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.LineWrapRadioGroup
+            android:id="@+id/radiogroup5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <RadioButton
+                android:id="@+id/radiogroup5_se1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="A.18岁以下"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup5_se2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:paddingRight="@dimen/size20"
+                android:text="B.18-26岁"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup5_se3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="C.26岁以上"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </com.tinytiger.common.view.LineWrapRadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingRight="@dimen/size15"
+            android:paddingBottom="@dimen/size20"
+            android:text="除了申请的游戏，您还有其他备选的游戏想要参与百科编辑吗？"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.LineWrapRadioGroup
+            android:id="@+id/radiogroup6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <RadioButton
+                android:id="@+id/radiogroup6_se1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="A.没有"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup6_se2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size20"
+                android:text="B.有1-2个备选"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+            <RadioButton
+                android:id="@+id/radiogroup6_se3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/rb_dot"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="C.很多游戏我都可以"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14" />
+
+        </com.tinytiger.common.view.LineWrapRadioGroup>
+
+        <EditText
+            android:id="@+id/et_text3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/solid_rectangle_5_f0f0ef"
+            android:gravity="center_vertical"
+            android:hint="请输入其他备选游戏名称："
+            android:maxLength="20"
+            android:paddingLeft="@dimen/size10"
+            android:textColorHint="@color/grayAA"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize12" />
+
+        <TextView
+            android:id="@+id/btn_complete"
+            style="@style/TextviewType"
+            android:layout_marginTop="@dimen/size55"
+            android:layout_marginBottom="@dimen/size60"
+            android:layout_marginRight="@dimen/size40"
+            android:layout_marginLeft="@dimen/size40"
+            android:text="提交申请"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</LinearLayout>

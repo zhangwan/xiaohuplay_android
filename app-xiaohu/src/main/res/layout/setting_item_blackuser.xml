@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size55"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size10"
+    android:paddingRight="@dimen/size15">
+
+
+    <com.tinytiger.common.view.title.AvatarView
+        android:id="@+id/avUser"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/size10"
+        app:TalentSize="@dimen/size40" />
+<!--    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/avUser"
+        android:paddingRight="@dimen/size5"
+        android:text="@string/app_name"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />-->
+    <com.tinytiger.titi.widget.text.MedalTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toStartOf="@id/tvAttention"
+        android:layout_toEndOf="@+id/avUser"
+        app:medal_is_bold="true"
+        app:medal_textSize="@dimen/textSize14" />
+    <TextView
+        android:id="@+id/tvBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/avUser"
+        android:paddingBottom="@dimen/size8"
+        android:text="粉丝"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/tvAttention"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size25"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/solid_gradient_20_ffcc03"
+        android:gravity="center"
+        android:text="解除拉黑"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize10" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line2"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15" />
+</RelativeLayout>

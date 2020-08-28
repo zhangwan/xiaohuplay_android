@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-22dp"
+            android:background="@color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp"
+            app:layout_behavior=".widget.view.CustomBehavior">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:collapsedTitleGravity="center"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:background="@drawable/solid_rectangle_30_ffffff_right"
+                            android:paddingStart="@dimen/size110"
+                            android:paddingTop="@dimen/size10"
+                            android:textColor="@color/gray33"
+                            android:textSize="@dimen/textSize15"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_name"
+                            android:background="@color/white"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:paddingStart="@dimen/size110"
+                            android:paddingLeft="@dimen/size15"
+                            android:paddingTop="@dimen/size8"
+                            android:paddingRight="@dimen/size15"
+                            android:paddingBottom="@dimen/size10"
+                            android:textColor="@color/gray99"
+                            android:textSize="@dimen/textSize12" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="@dimen/size80"
+                            android:layout_height="@dimen/size80"
+                            android:layout_marginLeft="@dimen/size15"
+                            android:layout_marginTop="180dp"
+                            android:scaleType="centerCrop"
+                            app:riv_corner_radius="@dimen/size12"
+                            app:riv_oval="false" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_avatar"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/tvDesc1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/size15"
+                                android:background="@color/white"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:paddingTop="@dimen/size8"
+                                android:paddingRight="@dimen/size15"
+                                android:textColor="@color/gray99"
+                                android:textSize="@dimen/textSize12"
+                                android:visibility="gone" />
+
+                            <View
+                                android:id="@+id/view1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_size_1"
+                                android:layout_below="@id/tvDesc1" />
+
+                            <TextView
+                                android:id="@+id/tvRead"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/size30"
+                                android:layout_below="@id/view1"
+                                android:layout_marginTop="@dimen/size15"
+                                android:paddingLeft="@dimen/size15"
+                                android:text="@string/app_name"
+                                android:textColor="@color/gray33"
+                                android:textSize="@dimen/textSize14" />
+
+                            <TextView
+                                android:id="@+id/tv_game"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/view1"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/size15"
+                                android:layout_marginEnd="@dimen/size15"
+                                android:drawableEnd="@mipmap/arrow"
+                                android:drawablePadding="@dimen/size4"
+                                android:text="@string/circle_game"
+                                android:textColor="@color/color_fbcc33"
+                                android:textSize="@dimen/size14" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvRead"
+                                android:layout_marginTop="@dimen/size20"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvCirclename"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/size15"
+                                    android:paddingTop="@dimen/size5"
+                                    android:text="圈主:  "
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/gray33"
+                                    android:textSize="@dimen/textSize14" />
+
+                                <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/size32"
+                                    android:layout_weight="1">
+
+                                    <LinearLayout
+                                        android:id="@+id/llCircleSize"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/size35"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible"
+                                        tools:ignore="TooDeepLayout" />
+                                </HorizontalScrollView>
+
+                                <TextView
+                                    android:id="@+id/tvApply"
+                                    android:layout_width="@dimen/size60"
+                                    android:layout_height="@dimen/size25"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/size15"
+                                    android:layout_toRightOf="@id/llCircleSize"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/solid_gradient_15_ffcc03"
+                                    android:gravity="center"
+                                    android:text="@string/circle_apply"
+                                    android:textColor="@color/gray33"
+                                    android:textSize="@dimen/textSize12"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/white" />
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size100"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:is_auto_loop="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+
+                        <com.tinytiger.titi.widget.view.AttentionView
+                            android:id="@+id/tvJoin"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size40"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginStart="@dimen/size15"
+                            android:layout_marginTop="@dimen/size15"
+                            android:layout_marginEnd="@dimen/size15"
+                            android:layout_marginRight="@dimen/size15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llHorn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size45"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/size15"
+                        android:paddingTop="@dimen/size20"
+                        android:paddingRight="@dimen/size15">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@mipmap/icon_horn"
+                            android:paddingRight="@dimen/size25"
+                            android:text="  公告"
+                            android:textColor="@color/gray33"
+                            android:textSize="@dimen/textSize14"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvHorn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@mipmap/icon_right_g"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@color/gray33"
+                            android:textSize="@dimen/textSize14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_f5f5f5"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/size15"
+                        android:paddingTop="@dimen/size10"
+                        android:paddingRight="@dimen/size15"
+                        android:paddingBottom="@dimen/size10">
+
+                        <LinearLayout
+                            android:id="@+id/llTop_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size35"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="@dimen/size15"
+                                android:text="置顶"
+                                android:textColor="@color/color_ff556e"
+                                android:textSize="@dimen/textSize14" />
+
+                            <TextView
+                                android:id="@+id/tvTopDes1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:textColor="@color/gray66"
+                                android:textSize="@dimen/textSize14" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/vLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line"
+                            android:background="@color/color_line" />
+
+                        <LinearLayout
+                            android:id="@+id/llTop_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size35"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="@dimen/size15"
+                                android:text="置顶"
+                                android:textColor="@color/color_ff556e"
+                                android:textSize="@dimen/textSize14" />
+
+                            <TextView
+                                android:id="@+id/tvTopDes2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:textColor="@color/gray66"
+                                android:textSize="@dimen/textSize14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_screen"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/magic_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size35"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/size16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_line2" />
+                </RelativeLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@color/color_ffcc03"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/rl_screen1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size35"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/size16" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_marginBottom="@dimen/size60"
+        android:scaleType="center"
+        android:src="@mipmap/icon_circle_send" />
+
+</FrameLayout>
+

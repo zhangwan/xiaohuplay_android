@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size10"
+    android:paddingRight="@dimen/size10">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size5"
+        android:layout_marginBottom="@dimen/size5"
+        android:background="#7f201f1e"
+        android:paddingLeft="@dimen/size4"
+        android:paddingRight="@dimen/size4"
+        android:text="00000"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize10" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivIcon"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingTop="@dimen/size5"
+        android:text="@string/app_name"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize12" />
+</RelativeLayout>

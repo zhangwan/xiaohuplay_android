@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:CenterText="通知"
+        app:showLine="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlNotive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="接受新消息通知"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tvNotive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="已关闭"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize14" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:paddingTop="@dimen/size5"
+        android:paddingBottom="@dimen/size5"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12"
+        android:text="如果你关闭或开启小虎Hoo的新消息通知，请在手机的“设置” —“通知”功能中，找到应用进行修改" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="声音"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.tinytiger.common.view.SwitchView
+            android:id="@+id/sbSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dip"
+            android:paddingTop="@dimen/size5"
+            android:paddingRight="12dip"
+            android:paddingBottom="@dimen/size5" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="振动"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.tinytiger.common.view.SwitchView
+            android:id="@+id/sbShock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dip"
+            android:paddingTop="@dimen/size5"
+            android:paddingRight="12dip"
+            android:paddingBottom="@dimen/size5" />
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:id="@+id/ll_comment_like"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size15"
+        android:text="消息通知" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="评论"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.tinytiger.common.view.SwitchView
+            android:id="@+id/sbComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dip"
+            android:paddingTop="@dimen/size5"
+            android:paddingRight="12dip"
+            android:paddingBottom="@dimen/size5" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="点赞"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <com.tinytiger.common.view.SwitchView
+            android:id="@+id/sbLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dip"
+            android:paddingTop="@dimen/size5"
+            android:paddingRight="12dip"
+            android:paddingBottom="@dimen/size5" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line" />
+
+</LinearLayout>
+</LinearLayout>

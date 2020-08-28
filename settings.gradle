@@ -1,0 +1,2 @@
+include ':app-xiaohu', ':uikit', ':common', ':libsuperplayer'
+rootProject.name='app'

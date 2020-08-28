@@ -1,0 +1,252 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+//apply plugin: 'com.tendcloud.codelessplugin'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.tinytiger.titi"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+
+        // Specifies the ABI configurations of your native
+        // libraries Gradle should build and package with your APK.
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+//        }
+        ndk {
+            //  abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+            abiFilters "armeabi-v7a"
+        }
+
+        //兼容svg
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    // android 选项 下面 添加lint 检测设置
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //java支持Lambda表达式
+    compileOptions {
+        sourceCompatibility rootProject.ext.appSourceCompatibility
+        targetCompatibility rootProject.ext.appTargetCompatibility
+    }
+
+    //显示文件夹
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+        titi {}//1
+        c360 {}//11
+        baidu {}//2
+        yingyongbao {}//3
+        yingyongbao2 {}//12
+        xiaomi {}//4
+        vovo {}//5
+        oppo {}//6
+        meizu {}//7
+        huawei {}//8
+        ali {}//10
+
+        productFlavors.all { flavor -> flavor.manifestPlaceholders = [CHANNEL_VALUE: name] }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "tinytiger-${defaultConfig.versionName}_${defaultConfig.versionCode}_${variant.productFlavors[0].name}.apk"
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("tinytiger.jks")
+            storePassword 'tinytiger'
+            keyAlias 'titi'
+            keyPassword 'tinytiger'
+        }
+        release {
+            storeFile file("tinytiger.jks")
+            storePassword 'tinytiger'
+            keyAlias 'titi'
+            keyPassword 'tinytiger'
+        }
+    }
+    buildTypes {
+        debug {
+            // buildConfigField("long", "apkBuildTime", "${System.currentTimeMillis()}")
+            minifyEnabled false
+            shrinkResources false
+            //Zipalign优化
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            debuggable true
+            // 移除无用的resource文件
+            shrinkResources false
+            //加载默认混淆配置文件
+            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+    }
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = []
+            }
+            dx.additionalParameters += '--set-max-idx-number=48000'
+        }
+    }
+    //忽略
+    /*configurations {
+       // all*.exclude group: 'com.google.code.gson'
+
+    }*/
+
+}
+
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation project(path: ':uikit')
+    implementation project(path: ':common')
+    //云信
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+
+    //高德地图
+    //2D地图
+    implementation 'com.amap.api:map2d:latest.integration'
+
+    implementation 'com.amap.api:location:4.8.0'
+    //搜索
+    implementation 'com.amap.api:search:6.1.0'
+
+
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.annotation:annotation:1.0.2'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.orhanobut:logger:2.1.1'
+    implementation 'com.alibaba:fastjson:1.2.47'
+    //权限库
+    implementation 'com.yanzhenjie:permission:2.0.3'
+
+    // 网络请求库
+    implementation rootProject.ext.networkLibs
+    implementation rootProject.ext.rxJavaLibs
+
+
+    //刷新控件
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'    //经典刷新头
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.0-alpha-1'    //经典加载
+    //指示器Indicator
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //头像框控件
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //事件通知
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //banner
+    implementation 'com.ms:Banner-androidx:2.3.19'
+
+    //伸缩布局
+    api 'com.google.android:flexbox:1.1.0'
+
+    //高斯,模糊
+    implementation 'jp.wasabeef:blurry:3.0.0'
+    //友盟
+    implementation 'com.umeng.umsdk:common:9.1.0' // (必选)
+    implementation 'com.umeng.umsdk:asms:1.1.3' // asms包依赖(必选)
+    implementation 'com.umeng.umsdk:crash:0.0.4' // native crash包依赖(必选)
+
+    //PopupWindow
+    implementation 'com.github.razerdp:BasePopup:2.2.1'
+    implementation 'com.github.razerdp:BasePopup_Candy-compat-androidx:2.2.1'
+
+    //腾讯播放器
+    implementation files('libs/LiteAVSDK_Player_6.8.7969.aar')
+    implementation project(path: ':libsuperplayer')
+
+    //内存检测
+    //implementation 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    //二维码
+    implementation 'com.king.zxing:zxing-lite:1.1.6-androidx'
+
+    //json动画
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    //加载webp动态图
+    implementation 'com.github.penfeizhou.android.animation:awebp:2.0.0'
+
+    // core 文件下载模块
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    implementation 'com.xwdz:QuietDownloader:1.0.8-beta'
+
+    //apk安装
+    implementation 'com.github.steven2947:FitAndroid8:0.5.0'
+
+    //图片多选
+    implementation 'com.yanzhenjie:album:2.1.3'
+    //activity滑动返回
+    implementation 'cn.bingoogolapple:bga-swipebacklayout:2.0.1'
+
+    //banner效果
+    implementation 'com.youth.banner:banner:2.0.10'
+
+    //jzvd播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:7.4.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.5'
+    // implementation 'com.danikula:videocache:2.7.0'
+
+    implementation 'com.to.aboomy:pager2banner:1.0.1' //最新版本
+
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation(name: 'saas-sdk-master-4.33.1-6a8ab900-rel', ext: 'aar', {
+        exclude group: 'com.netease.nimlib'
+    })
+}

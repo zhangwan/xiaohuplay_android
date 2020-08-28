@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/size30"
+    android:paddingRight="@dimen/size5"
+    android:paddingBottom="@dimen/size5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/size5"
+        android:paddingLeft="@dimen/size5"
+        android:paddingBottom="@dimen/size3"
+        android:paddingTop="@dimen/size3"
+        android:text="查看更多"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize12" />
+
+</RelativeLayout>

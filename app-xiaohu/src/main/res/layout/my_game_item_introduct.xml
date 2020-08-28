@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <!--游戏简介 -->
+    <TextView
+        android:id="@+id/tv_title_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size15"
+        android:text="基本介绍"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tvIntroduction"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:paddingTop="@dimen/size10"
+
+        android:text="@string/app_name"
+        android:textSize="@dimen/textSize14"
+        android:textColor="@color/gray33"
+        android:layout_height="wrap_content"/>
+    <com.tinytiger.common.view.textview.ShowAllTextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size15"
+        android:paddingTop="@dimen/size5"
+        android:paddingRight="@dimen/size15"
+        android:text="@string/app_name"
+        android:textColor="@color/gray77"
+        android:textSize="@dimen/textSize14"
+        app:rightMenuText="全文" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@color/color_line2" />
+</LinearLayout>

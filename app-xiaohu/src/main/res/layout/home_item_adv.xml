@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivAdv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size110"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvClos"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size25"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size60"
+        android:layout_marginRight="@dimen/size25"
+        android:background="@drawable/solid_rectangle_10_33000000"
+        android:gravity="center"
+        android:text="0 跳过"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize14" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size150"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_avd_but" />
+</RelativeLayout>

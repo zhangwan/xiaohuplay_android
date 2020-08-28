@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size10"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_marginEnd="@dimen/size10"
+        android:background="@mipmap/shadow_white">
+
+
+        <RelativeLayout
+            android:id="@+id/rlGameInfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size140"
+            android:padding="@dimen/size10">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIcon1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                app:riv_border_width="0dip"
+                app:riv_corner_radius="@dimen/size6"
+                app:riv_oval="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size30"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/solid_rectangle_10_33000000_but" />
+
+            <TextView
+                android:id="@+id/tvGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="@dimen/size10"
+                android:paddingBottom="@dimen/size4"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tvGameSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:drawableRight="@mipmap/icon_right_w"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:paddingRight="@dimen/size10"
+                android:paddingBottom="@dimen/size4"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlGameInfo"
+            android:layout_marginTop="@dimen/size20"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/size15"
+            android:paddingEnd="@dimen/size15"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler_tab"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingStart="@dimen/size15"
+            android:paddingEnd="@dimen/size15"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/app_name"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize15"
+            android:textStyle="bold" />
+
+
+        <com.tinytiger.common.view.textview.ShowAllTextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:paddingBottom="@dimen/size15"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            app:leftMargin="@dimen/size35"
+            app:maxShowLines="8"
+            android:paddingStart="@dimen/size15"
+            android:paddingEnd="@dimen/size15"
+            app:rightMargin="@dimen/size15"
+            app:rightMenuText="全文"
+            app:viewClick="false" />
+
+
+        <LinearLayout
+            android:id="@+id/llReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDesc"
+            android:background="@drawable/solid_rectangle_5_f7f7f7"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/size15"
+            android:layout_marginEnd="@dimen/size15"
+            android:padding="@dimen/size10"/>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:paddingStart="@dimen/size15"
+            android:paddingEnd="@dimen/size15"
+            android:layout_below="@id/llReply">
+
+            <com.tinytiger.titi.widget.view.Anim.LikeView
+                android:id="@+id/viewLike"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/size20" />
+
+            <View
+                android:layout_width="@dimen/size1"
+                android:layout_height="@dimen/size15"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/tvRead"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/icon_read"
+                android:drawablePadding="@dimen/size10"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size35"
+                android:text="0"
+                android:textColor="@color/gray66"
+                android:textSize="@dimen/textSize13" />
+
+            <View
+                android:layout_width="@dimen/size1"
+                android:layout_height="@dimen/size15"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/icon_share"
+                android:drawablePadding="@dimen/size10"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size35"
+                android:text="0"
+                android:textColor="@color/gray66"
+                android:textSize="@dimen/textSize13" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vLine1"
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size1"
+            android:layout_below="@+id/ll_bottom" />
+
+        <View
+            android:id="@+id/vLine2"
+            android:layout_width="@dimen/size1"
+            android:layout_height="@dimen/size1" />
+
+        <View
+            android:id="@+id/vViewBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vLine1"
+            android:layout_below="@+id/vLine2"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:button="@drawable/icon_circle_checked"
+        android:visibility="invisible" />
+
+
+</FrameLayout>

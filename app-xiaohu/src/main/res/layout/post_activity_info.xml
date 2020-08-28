@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/size60"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back" />
+
+        <ImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@mipmap/post_icon_title" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="@dimen/size60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:src="@mipmap/icon_more_g2" />
+
+
+        <com.tinytiger.titi.widget.view.AttentionView
+            android:id="@+id/avAttentionTitle"
+            android:layout_width="@dimen/size70"
+            android:layout_height="@dimen/size30"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivMore"
+            android:visibility="gone" />
+
+
+        <com.tinytiger.common.view.title.AvatarView
+            android:id="@+id/avUserTitle"
+            android:layout_width="@dimen/size30"
+            android:layout_height="@dimen/size30"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size10"
+            android:layout_toRightOf="@+id/ivBack"
+            android:visibility="gone"
+            app:TalentSize="@dimen/size40" />
+
+
+        <com.tinytiger.titi.widget.text.MedalTextView
+            android:id="@+id/tvNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/avAttentionTitle"
+            android:layout_toRightOf="@+id/avUserTitle"
+            android:visibility="gone"
+            app:medal_is_bold="true"
+            app:medal_textSize="@dimen/textSize14" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size45"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/size50"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/post_item_title" />
+
+            <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnableFooterFollowWhenLoadFinished="true"
+                app:srlEnableScrollContentWhenLoaded="true">
+
+                <com.tinytiger.common.view.recyclerview.SlideRecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+                <com.scwang.smart.refresh.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlClassicsSpinnerStyle="Translate"
+                    app:srlAccentColor="@color/grayAA"
+                    app:srlTextNothing="--- 人家是一只有底线的小脑斧 ---"
+                    app:srlTextSizeTitle="@dimen/textSize12" />
+            </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_above="@+id/llEt"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:id="@+id/llEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/et_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size12"
+            android:layout_weight="1"
+            android:background="@drawable/solid_rectangle_30_f7f7f7"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size40"
+            android:paddingStart="@dimen/size8"
+            android:paddingEnd="@dimen/size8"
+            android:singleLine="true"
+            android:text="悄咪咪的说几句…"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+
+        <com.tinytiger.titi.widget.view.Anim.LikeView
+            android:id="@+id/viewLikeBut"
+            android:layout_width="wrap_content"
+            android:minWidth="@dimen/size50"
+            android:layout_height="@dimen/size50" />
+
+        <TextView
+            android:id="@+id/tvReadBut"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size50"
+            android:drawableLeft="@mipmap/icon_read"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size15"
+            android:text="0"
+            android:textColor="@color/gray66"
+            android:textSize="@dimen/textSize13" />
+
+        <ImageView
+            android:id="@+id/ivShareBut"
+            android:layout_width="@dimen/size45"
+            android:layout_height="@dimen/size50"
+            android:paddingRight="@dimen/size5"
+            android:scaleType="center"
+            android:src="@mipmap/icon_share" />
+    </LinearLayout>
+</RelativeLayout>

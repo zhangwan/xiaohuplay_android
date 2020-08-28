@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayF9"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.tinytiger.common.view.text.BaseItemLayout
+                android:id="@+id/item_edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:image="@mipmap/icon_share_phone_gray"
+                app:infoText="更换号码"
+                app:titleText="手机号" />
+
+
+            <com.tinytiger.common.view.text.BaseItemLayout
+                android:id="@+id/item_edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleText="@string/edit_password" />
+
+
+            <TextView
+                style="@style/TextInfoType"
+                android:layout_height="@dimen/size40"
+                android:layout_marginStart="@dimen/size16"
+                android:text="社交账号绑定"
+                android:textSize="@dimen/textSize14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/size50"
+                android:paddingStart="@dimen/size12"
+                android:paddingEnd="@dimen/size12">
+
+
+                <ImageView
+                    android:id="@+id/iv_image_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/size6"
+                    android:src="@drawable/icon_circle_wechat_selector" />
+
+                <TextView
+                    style="@style/TextMainType"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/iv_image_wechat"
+                    android:text="@string/account_wechat" />
+
+
+                <TextView
+                    android:id="@+id/tv_bind_wechat"
+                    style="@style/TextButtonType1"
+                    android:layout_height="@dimen/size25"
+                    android:paddingLeft="@dimen/size15"
+                    android:textSize="@dimen/textSize10"
+                    android:paddingRight="@dimen/size15"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bind" />
+
+
+            </RelativeLayout>
+
+            <View style="@style/DividerType" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/size50"
+                android:paddingStart="@dimen/size12"
+                android:paddingEnd="@dimen/size12">
+
+
+                <ImageView
+                    android:id="@+id/iv_image_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/size6"
+                    android:src="@drawable/icon_circle_qq_selector" />
+
+                <TextView
+                    style="@style/TextMainType"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/iv_image_qq"
+                    android:text="@string/account_qq" />
+
+
+                <TextView
+                    android:id="@+id/tv_bind_qq"
+                    style="@style/TextButtonType1"
+                    android:layout_height="@dimen/size25"
+                    android:paddingLeft="@dimen/size15"
+                    android:textSize="@dimen/textSize10"
+                    android:paddingRight="@dimen/size15"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bind" />
+            </RelativeLayout>
+
+            <View style="@style/DividerType" />
+
+            <com.tinytiger.common.view.text.BaseItemLayout
+                android:id="@+id/item_cancel_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleText="注销账号" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

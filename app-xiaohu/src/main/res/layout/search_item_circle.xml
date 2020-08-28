@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size75"
+    android:padding="@dimen/size15">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size80"
+        android:layout_height="@dimen/size45"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="@dimen/size10"
+        app:riv_border_width="0dip"
+        app:riv_corner_radius="@dimen/size5"
+        app:riv_oval="false" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/ivIcon"
+        android:text="@string/app_name"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:drawablePadding="@dimen/size4"
+        android:layout_alignParentBottom="true"
+        android:drawableLeft="@mipmap/icon_circle_red"
+        android:text="@string/app_name"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+    <TextView
+        android:id="@+id/tvAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/size7"
+        android:paddingTop="@dimen/size2"
+        android:paddingBottom="@dimen/size2"
+        android:paddingRight="@dimen/size7"
+        android:background="@drawable/solid_rectangle_5_f2f2f2"
+        android:text="+ 创建新圈子"
+        android:textColor="@color/color_ff556e"
+        android:textSize="@dimen/textSize12" />
+
+</RelativeLayout>

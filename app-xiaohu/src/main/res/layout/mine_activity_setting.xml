@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayF9"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
+
+
+        <LinearLayout
+            android:id="@+id/ll_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvUser"
+                style="@style/TextInfoType"
+                android:layout_height="@dimen/size40"
+                android:layout_marginStart="@dimen/size16"
+                android:text="账户"
+                android:textSize="@dimen/textSize14" />
+
+
+            <com.tinytiger.common.view.text.BaseItemLayout
+                android:id="@+id/item_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleText="修改个人资料" />
+
+
+            <com.tinytiger.common.view.text.BaseItemLayout
+                android:id="@+id/item_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleText="@string/account_security" />
+
+
+            <TextView
+                style="@style/TextInfoType"
+                android:layout_height="@dimen/size40"
+                android:layout_marginStart="@dimen/size16"
+                android:text="@string/setting"
+                android:textSize="@dimen/textSize14" />
+
+            <com.tinytiger.common.view.text.BaseItemLayout
+                android:id="@+id/item_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleText="@string/privacy" />
+
+        </LinearLayout>
+
+        <com.tinytiger.common.view.text.BaseItemLayout
+            android:id="@+id/item_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="@string/notice" />
+
+
+        <com.tinytiger.common.view.text.BaseItemLayout
+            android:id="@+id/item_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="清理缓存" />
+
+        <com.tinytiger.common.view.text.BaseItemLayout
+            android:id="@+id/item_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:titleText="更新版本" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:gravity="center"
+        android:layout_margin="@dimen/size24"
+        android:text="@string/login_or_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

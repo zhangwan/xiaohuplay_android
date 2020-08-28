@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/view_1"
+                layout="@layout/my_game_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size10"
+                android:layout_below="@id/view_1"
+                android:background="@color/color_line2" />
+
+            <FrameLayout
+                android:layout_below="@id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/size280"
+                        android:layout_height="@dimen/size50"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size15"
+                        android:background="@drawable/solid_rectangle_5_f2f2f2"
+                        android:gravity="center"
+                        android:text="已点亮！该百科开放时\n小萌虎将会消息通知(ˊᵒ̴̶̷̤ꇴᵒ̴̶̷̤ˋ)꒰"
+                        android:textColor="@color/grayAA"
+                        android:textSize="@dimen/textSize14" />
+
+                    <com.tinytiger.common.widget.soulplanet.view.SoulPlanetsView
+                        android:id="@+id/soulPlanetView"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_margin="10dp"
+                        app:autoScrollModeSoul="decelerate"
+                        app:darkColorSoul="@color/black"
+                        app:lightColorSoul="@color/color_red_ccfa3c55"
+                        app:radiusPercentSoul="0.75"
+                        app:scrollSpeedSoul="20" />
+
+                    <TextView
+                        android:id="@+id/tvSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size80"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:textColor="@color/grayAA"
+                        android:textSize="@dimen/textSize14" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llBright"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size60"
+                        android:src="@mipmap/icon_wiki_earth" />
+
+                    <TextView
+                        android:layout_width="@dimen/size250"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/size20"
+                        android:gravity="center"
+                        android:text="该百科还未开放，邀您助力解锁，\n更有机会成为百科管理员(σﾟ∀ﾟ)σ"
+                        android:textColor="@color/grayAA"
+                        android:textSize="@dimen/textSize14" />
+
+                    <TextView
+                        android:id="@+id/iv_submit"
+                        android:layout_width="@dimen/size220"
+                        android:layout_height="@dimen/size40"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/size100"
+                        android:background="@drawable/solid_rectangle_24_ffcc03_linear"
+                        android:gravity="center"
+                        android:text="点亮百科"
+                        android:textColor="@color/gray33"
+                        android:textSize="@dimen/textSize16" />
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:alpha="0"
+        android:background="@color/color_ffcc03"
+        android:scaleType="centerCrop" />
+
+</FrameLayout>

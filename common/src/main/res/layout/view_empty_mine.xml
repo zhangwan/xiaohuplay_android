@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/empty_view_tv"
+        style="@style/TextMainType"
+        android:layout_marginTop="@dimen/size100"
+        android:text="@string/empty_view_hint"
+        android:textColor="@color/gray99" />
+</LinearLayout>

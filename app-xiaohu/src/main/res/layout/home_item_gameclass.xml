@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/size25"
+    android:background="@drawable/solid_rectangle_white_30"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/size15"
+    android:paddingLeft="@dimen/size15"
+    android:paddingRight="@dimen/size15">
+
+    <TextView
+        android:id="@+id/tvTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="# "
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="王者荣耀"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+</LinearLayout>

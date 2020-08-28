@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="@dimen/size16"
+            android:text="@string/cancel"
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/textSize14" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray28"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/size8"
+            android:text="选择位置"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/size16"
+            android:text="@string/complete"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize14" />
+
+    </RelativeLayout>
+
+    <View style="@style/DividerType" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/size160"
+        >
+
+     <com.tinytiger.common.view.picker.OptionsPickerView
+         android:layout_width="match_parent"
+         android:id="@+id/opv_city"
+         android:layout_centerInParent="true"
+         android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llEt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/size15"
+    android:paddingRight="@dimen/size15">
+
+    <EditText
+        android:id="@+id/et_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size6"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_marginBottom="@dimen/size6"
+        android:layout_toLeftOf="@+id/tv_send"
+        android:background="@drawable/solid_rectangle_30_f7f7f7"
+        android:drawablePadding="@dimen/size8"
+        android:focusable="true"
+        android:hint="悄咪咪的说几句…"
+        android:maxLength="1000"
+        android:maxLines="1"
+        android:minHeight="@dimen/size40"
+        android:paddingStart="@dimen/size8"
+        android:paddingEnd="@dimen/size8"
+        android:singleLine="true"
+        android:textColor="@color/gray28"
+        android:textColorLink="@color/gray99"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size30"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/solid_gradient_15_ffcc03"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+</RelativeLayout>
+

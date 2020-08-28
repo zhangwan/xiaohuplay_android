@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textMessageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:layout_width="@dimen/size50"
+        android:layout_height="48dip"
+        android:contentDescription="@string/empty"
+        android:scaleType="center"
+        android:src="@mipmap/nim_message_button_bottom_emoji" />
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:autoLink="phone"
+        android:layout_marginBottom="@dimen/size6"
+        android:layout_marginTop="@dimen/size6"
+        android:background="@drawable/solid_rectangle_15_f5f6f7"
+        android:minHeight="@dimen/size35"
+        android:paddingLeft="@dimen/size10"
+        android:paddingTop="@dimen/size4"
+        android:hint="悄咪咪的说几句…"
+        android:paddingRight="@dimen/size10"
+        android:paddingBottom="@dimen/size4"
+        android:textColor="@color/gray28"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvSendTxt"
+        android:layout_width="@dimen/size50"
+        android:layout_height="26dip"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:background="@drawable/stroke_rectangle_15_aaaaaa"
+        android:gravity="center"
+        android:textColor="@color/grayAA"
+        android:text="发送"
+        android:textSize="@dimen/textSize12" />
+</LinearLayout>

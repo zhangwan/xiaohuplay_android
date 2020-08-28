@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tinytiger.common.widget.swipe.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:contentLayout="@+id/content"
+    app:rightMenuView="@+id/right">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/size100"
+        android:paddingStart="@dimen/size24"
+        android:paddingEnd="@dimen/size24">
+
+
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size60"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/size10"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size8"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="@dimen/size4"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize16"
+            app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+            app:layout_constraintEnd_toStartOf="@id/tv_action"
+            app:layout_constraintStart_toEndOf="@id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+
+
+
+        <TextView
+            android:id="@+id/tv_action"
+            android:layout_width="76dp"
+            android:layout_height="30dp"
+            android:background="@drawable/solid_rectangle_15_ffcc03"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize16"
+            app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_avatar" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:background="@color/color_line"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/right"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="#cbcbcb"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize16" />
+
+
+    </LinearLayout>
+
+
+</com.tinytiger.common.widget.swipe.EasySwipeMenuLayout>

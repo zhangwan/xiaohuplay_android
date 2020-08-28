@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/player_bottom_shadow"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--播放/暂停-->
+        <ImageView
+            android:id="@+id/iv_pause"
+            android:layout_width="@dimen/size40"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:src="@mipmap/ic_vod_pause_normal" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:max="1000"
+            android:maxHeight="3dp"
+            android:minHeight="2dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/seekbar_bg"
+            android:thumb="@mipmap/seekbar_thumb" />
+
+
+        <!--播放位置-->
+        <TextView
+            android:id="@+id/tv_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/size10"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="11.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12" />
+        <!--总时长-->
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="11.0sp" />
+
+        <TextView
+            android:id="@+id/tv_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="原画"
+            android:textColor="@android:color/white"
+            android:textSize="11dp" />
+
+        <ImageView
+            android:id="@+id/iv_fullscreen"
+            android:layout_width="@dimen/size40"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:src="@mipmap/ic_vod_fullscreen" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mNetworkView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray33_80"
+        android:visibility="gone">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size250"
+            android:layout_alignParentBottom="true"
+            android:clickable="true" />
+        <TextView
+            android:id="@+id/tvNetworkInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size160"
+            android:layout_centerHorizontal="true"
+            android:text="当前网络不可用，请点击重新连接"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_network_connect"
+            android:layout_width="@dimen/size100"
+            android:layout_height="@dimen/size25"
+            android:layout_below="@+id/tvNetworkInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size20"
+            android:background="@drawable/solid_rectangle_6_trans_30"
+            android:gravity="center"
+            android:text="重新连接"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize12"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/media_controller_view_height"
+        android:background="@drawable/player_top_shadow"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/size60"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back_w" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/large_tv_vtt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout_bottom"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/shape_vtt_text_bg"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.tencent.liteav.demo.play.view.TCVodQualityView
+        android:id="@+id/vodQualityView"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_live"
+        android:layout_width="@dimen/size24"
+        android:layout_height="@dimen/size24"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:visibility="gone" />
+
+    <com.tencent.liteav.demo.play.view.TCVolumeBrightnessProgressLayout
+        android:id="@+id/gesture_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+
+    <com.tencent.liteav.demo.play.view.TCVideoProgressLayout
+        android:id="@+id/video_progress_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/rlOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/gray33_80"
+        android:visibility="visible">
+
+            <TextView
+                android:id="@+id/layout_replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/video_icon_replay"
+                android:drawablePadding="@dimen/size4"
+                android:padding="@dimen/size15"
+                android:text="重新播放"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize12" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

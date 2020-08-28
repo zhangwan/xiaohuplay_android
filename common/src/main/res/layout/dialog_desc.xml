@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="@dimen/size260"
+    android:layout_height="wrap_content"
+    android:background="@drawable/solid_rectangle_10_white"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/size15"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size2"
+        android:text="编辑简介"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSize15"
+        android:textColor="@color/gray33"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#fafafa"
+        android:minHeight="@dimen/size130"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:padding="@dimen/size4"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/gray28"
+            android:maxLength="30"
+            android:background="@null"/>
+
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size4"
+            android:text="0/30"
+            android:layout_gravity="bottom|end"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/color_b2b2b2"
+            />
+
+    </FrameLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/size260"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/size90"
+            android:layout_height="35dp"
+            android:background="@drawable/solid_rectangle_20_f5f6f7"
+            android:gravity="center"
+            android:textSize="@dimen/textSize14"
+            android:textColor="@color/gray33"
+            android:text="@string/cancel" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="@dimen/size90"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/solid_gradient_20_ffcc03"
+            android:textSize="@dimen/textSize16"
+            android:textColor="@color/gray33"
+            android:gravity="center"
+            android:text="保存" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:background="#F2F2F2"
+        android:layout_marginBottom="@dimen/size14"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size40"
+        android:gravity="center"
+        android:paddingLeft="@dimen/size20"
+        android:text="@string/app_name"
+        android:layout_below="@id/view_line"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMore"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size40"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingRight="@dimen/size20"
+        android:text="@string/app_name"
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize14"
+        android:layout_below="@id/view_line"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size55"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/size25"
+        android:paddingRight="@dimen/size20"
+        android:layout_below="@id/view_line"
+        android:src="@mipmap/icon_right_g"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGameName"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/size5"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_below="@+id/recycler_list"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginTop="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@color/color_f2f2f2" />
+</RelativeLayout>

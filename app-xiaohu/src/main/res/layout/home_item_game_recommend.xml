@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="@dimen/size300"
+    android:layout_height="@dimen/size160"
+    android:background="@mipmap/bg_10"
+    android:layout_marginLeft="@dimen/size15"
+    android:padding="@dimen/size12">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size50"
+        android:layout_height="@dimen/size50"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:riv_corner_radius="10dp"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size2"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:paddingLeft="@dimen/size10"
+        android:text="@string/app_name"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBar"
+        style="@style/RadingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size4"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="2" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignParentRight="true"
+        android:paddingTop="@dimen/size7"
+        android:text="5.0分"
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize16"
+        android:textStyle="bold" />
+
+
+    <View
+        android:id="@+id/vv"
+        android:layout_width="@dimen/size45"
+        android:layout_height="@dimen/size5"
+        android:layout_below="@+id/ivIcon"
+        android:layout_marginLeft="@dimen/size2"
+        android:layout_marginTop="@dimen/size10"
+        android:background="@color/color_line" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vv"
+        android:ellipsize="end"
+        android:lines="2"
+        android:paddingTop="@dimen/size7"
+        android:text="@string/app_name"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:drawableRight="@mipmap/icon_read"
+        android:drawablePadding="@dimen/size5"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize14" />
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size16"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:layout_marginTop="@dimen/size4"
+            android:background="@drawable/solid_rectangle_20_f7f7f7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/size8"
+            android:paddingEnd="@dimen/size8">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size8"
+                android:src="@mipmap/login_icon_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size8"
+                android:text="+86"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize12" />
+
+
+            <EditText
+                android:id="@+id/et_phone_member"
+                style="@style/EditTextBase"
+                android:hint="@string/input_phone_member"
+                android:inputType="number"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:layout_marginTop="@dimen/size16"
+            android:background="@drawable/solid_rectangle_20_f7f7f7"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/size8"
+            android:paddingEnd="@dimen/size8">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size8"
+                android:src="@mipmap/login_icon_code" />
+
+
+            <EditText
+                android:id="@+id/et_code"
+                style="@style/EditTextBase"
+                android:hint="@string/input_phone_code"
+                android:inputType="number"
+                android:maxLength="6" />
+
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size8"
+                android:text="@string/get_code"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/textSize12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

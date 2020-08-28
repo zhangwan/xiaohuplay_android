@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showLine="gone" />
+
+
+    <RadioGroup
+        android:id="@+id/card_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
+
+        <RadioButton
+            android:id="@+id/card_rb_0"
+            style="@style/rb_style"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/bg_selector_attention_no"
+            android:checked="true"
+            android:paddingTop="@dimen/size5"
+            android:paddingBottom="@dimen/size5"
+            android:text="吐槽"
+            android:textColor="@color/text_color_ffcc03_no"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/card_rb_1"
+            style="@style/rb_style"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/bg_selector_attention_no"
+            android:paddingTop="@dimen/size5"
+            android:paddingBottom="@dimen/size5"
+            android:text="BUG"
+            android:textColor="@color/text_color_ffcc03_no"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/card_rb_2"
+            style="@style/rb_style"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/bg_selector_attention_no"
+            android:paddingTop="@dimen/size5"
+            android:paddingBottom="@dimen/size5"
+            android:text="产品建议"
+            android:textColor="@color/text_color_ffcc03_no"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/card_rb_3"
+            style="@style/rb_style"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/bg_selector_attention_no"
+            android:paddingTop="@dimen/size5"
+            android:paddingBottom="@dimen/size5"
+            android:text="投诉"
+            android:textColor="@color/text_color_ffcc03_no"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/et_send"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size180"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@color/color_line"
+        android:drawablePadding="@dimen/size8"
+        android:gravity="left"
+        android:hint=""
+        android:padding="@dimen/size10"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize12"
+        app:layout_constraintTop_toBottomOf="@id/card_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

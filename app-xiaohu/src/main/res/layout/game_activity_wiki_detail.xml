@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:showLine="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size55"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/size35"
+            android:layout_height="@dimen/size35"
+            android:layout_marginRight="@dimen/size10"
+            android:scaleType="centerCrop"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="@dimen/size5"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ll_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/icon_collect_nor"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center"
+            android:paddingRight="@dimen/size15"
+            android:text="收藏"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/ll_recovery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_error_recovery"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center"
+            android:text="纠错"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size15"
+        android:paddingTop="@dimen/size10"
+        android:paddingRight="@dimen/size15"
+        android:paddingBottom="@dimen/size10">
+
+        <TextView
+            android:id="@+id/tv_edit_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/textSize12" />
+
+        <TextView
+            android:id="@+id/tv_editor"
+            android:layout_width="@dimen/size80"
+            android:layout_height="@dimen/size20"
+            android:background="@drawable/stroke_rectangle_5_ffcc03"
+            android:gravity="center"
+            android:text="查看编辑者"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize12" />
+    </LinearLayout>
+
+    <com.tinytiger.common.view.web.X5TxtWebView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="0dip"
+        android:scrollbars="none" />
+
+
+</LinearLayout>

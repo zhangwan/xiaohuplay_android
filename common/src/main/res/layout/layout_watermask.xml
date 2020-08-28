@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_logo_img"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="2dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_hoo_logo" />
+
+        <TextView
+            android:id="@+id/tv_company_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/iv_logo_img"
+            android:singleLine="true"
+            android:text="小虎Hoo"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_info_text"
+            android:layout_width="65dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/tv_company_text"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_logo_img"
+            android:src="@mipmap/ic_water_mask_game" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_info_text"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_logo"
+        android:layout_alignRight="@+id/rl_logo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="10dp"
+        android:lineSpacingExtra="4dp"
+        android:text="相关信息相关信息相关信息相关信息相关信息相关信息相关信息相关信息相关信息相关信息"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

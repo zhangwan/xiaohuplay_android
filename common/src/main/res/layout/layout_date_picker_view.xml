@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+
+    <com.tinytiger.common.view.picker.ex.YearWheelView
+        android:id="@+id/wv_year"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_marginLeft="@dimen/size8" />
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_marginLeft="@dimen/size8"
+        android:layout_marginEnd="@dimen/size8"
+        android:layout_marginRight="@dimen/size8"
+        android:text="@string/date_picker_view_year"
+        tools:textSize="20sp" />
+
+    <com.tinytiger.common.view.picker.ex.MonthWheelView
+        android:id="@+id/wv_month"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_marginLeft="@dimen/size8"
+        android:layout_marginEnd="@dimen/size8"
+        android:layout_marginRight="@dimen/size8"
+        android:text="@string/date_picker_view_month"
+        tools:textSize="20sp" />
+
+    <com.tinytiger.common.view.picker.ex.DayWheelView
+        android:id="@+id/wv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/size8"
+        android:layout_marginRight="@dimen/size8" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/size8"
+        android:layout_marginRight="@dimen/size8"
+        android:text="@string/date_picker_view_day"
+        tools:textSize="20sp" />
+
+</LinearLayout>

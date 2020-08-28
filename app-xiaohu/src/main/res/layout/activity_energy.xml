@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.mine.wallet.WalletEnergyActivity">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:showLine="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_FAFAFA"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size15"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/size15"
+                android:paddingBottom="@dimen/size15">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginBottom="@dimen/size5">
+
+                        <com.tinytiger.common.widget.CirclePercentView
+                            android:id="@+id/circle_like_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:circleBgColor="@color/gray_cfcfcf"
+                            app:circleIsGradient="true"
+                            app:circleProgressColor="@color/color_ffcc03" />
+
+                        <TextView
+                            android:id="@+id/tv_like_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/color_fbcc33"
+                            android:textSize="@dimen/size20" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/size5"
+                        android:text="点赞与评论"
+                        android:textColor="@color/gray33"
+                        android:textSize="@dimen/size14" />
+
+                    <TextView
+                        android:id="@+id/tv_like_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/size5"
+                        android:text="00:14:49后恢复1点"
+                        android:textColor="@color/gray99"
+                        android:textSize="@dimen/size12" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.tinytiger.common.widget.CirclePercentView
+                        android:id="@+id/circle_conduct_mining"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginBottom="@dimen/size5"
+                        app:circleBgColor="@color/gray_cfcfcf"
+                        app:circleIsGradient="true"
+                        app:circleProgressColor="@color/color_ffcc03" />
+
+                    <TextView
+                        android:id="@+id/tv_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/size5"
+                        android:text="行为挖矿"
+                        android:textColor="@color/gray33"
+                        android:textSize="@dimen/size14" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/size5"
+                        android:text="能力已满"
+                        android:textColor="@color/gray99"
+                        android:textSize="@dimen/size12" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginTop="@dimen/size20"
+            android:layout_marginBottom="@dimen/size15"
+            android:gravity="center"
+            android:text="能量规则"
+            android:textColor="@color/gray2A2A28"
+            android:textSize="@dimen/size16" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_marginRight="@dimen/size10"
+            android:background="@mipmap/bg_wallet_energy"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size20"
+            android:paddingTop="@dimen/size15"
+            android:paddingRight="@dimen/size20"
+            android:paddingBottom="@dimen/size15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size5"
+                android:drawableLeft="@mipmap/icon_like"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="点赞与评论："
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/size15" />
+
+            <View
+                android:layout_width="@dimen/size20"
+                android:layout_height="@dimen/size2"
+                android:background="@color/gray33" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size15"
+                android:text="@string/wallet_energy_like_comment"
+                android:textColor="@color/gray2A2A28"
+                android:textSize="@dimen/size14" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_marginRight="@dimen/size10"
+            android:background="@mipmap/bg_wallet_energy"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size20"
+            android:paddingTop="@dimen/size15"
+            android:paddingRight="@dimen/size20"
+            android:paddingBottom="@dimen/size15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size5"
+                android:drawableLeft="@mipmap/icon_like"
+                android:drawablePadding="@dimen/size5"
+                android:gravity="center"
+                android:text="行为挖矿："
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/size15" />
+
+            <View
+                android:layout_width="@dimen/size20"
+                android:layout_height="@dimen/size2"
+                android:background="@color/gray33" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size15"
+                android:text="@string/wallet_energy_action"
+                android:textColor="@color/gray2A2A28"
+                android:textSize="@dimen/size14" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

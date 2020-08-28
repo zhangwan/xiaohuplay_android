@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/size25"
+    android:paddingBottom="@dimen/size25">
+
+
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:drawableEnd="@mipmap/icon_advance"
+        android:padding="@dimen/size8"
+        android:text="@string/skip"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/size64"
+        android:layout_height="@dimen/size64"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/size8"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_person_head"
+        app:riv_oval="true" />
+
+
+    <TextView
+        style="@style/TextInfoType"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/size4"
+        android:text="上传您的头像,让更多人记住你" />
+
+
+    <EditText
+        android:id="@+id/et_input_nickname"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/size30"
+        android:layout_height="wrap_content"
+        android:maxLength="16"
+        android:layout_marginLeft="@dimen/size25"
+        android:layout_marginRight="@dimen/size25"
+        android:minHeight="@dimen/size35"
+        android:textColor="@color/gray28"
+        android:background="@drawable/solid_rectangle_15_f5f6f7"
+        android:hint="请输入您的昵称让更多人找到你～"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:textCursorDrawable="@null"
+        android:textSize="14sp" />
+
+    <TextView
+        style="@style/TextMainType"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size30"
+        android:padding="@dimen/size4"
+        android:text="请选择真实性别,让更多人关注你" />
+
+
+    <LinearLayout
+        android:layout_width="@dimen/size200"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size15"
+        android:orientation="horizontal"
+        android:padding="@dimen/size8">
+
+
+        <ImageView
+            android:id="@+id/iv_boy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_gender_male_2" />
+
+        <ImageView
+            android:id="@+id/iv_girl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size70"
+            android:src="@mipmap/icon_gender_girl_1" />
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/TextviewType"
+        android:id="@+id/btn_complete"
+        android:layout_margin="@dimen/size30"
+        android:text="完成" />
+
+</LinearLayout>

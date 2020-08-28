@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size90"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/size20"
+    android:paddingEnd="@dimen/size20">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/size60"
+        android:layout_height="@dimen/size60"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size5"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/size10"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingRight="@dimen/size10"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="@dimen/size35"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@mipmap/icon_more_g" />
+
+    <com.tinytiger.titi.widget.view.DownloadProgressView
+        android:id="@+id/dpvProgress"
+        android:layout_width="60dp"
+        android:layout_below="@+id/ivMore"
+        android:layout_height="@dimen/size30"
+        android:layout_alignParentRight="true"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:background="@color/color_line"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+

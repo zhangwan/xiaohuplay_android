@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.tinytiger.common.view.title.TitleView
+            android:id="@+id/title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/size16">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size50">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/size80"
+                    android:layout_height="@dimen/size80"
+                    android:scaleType="centerCrop"
+                    android:src="@color/grayF1"
+                    app:riv_oval="true" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:padding="@dimen/size4"
+                    android:src="@mipmap/user_icon_photo" />
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/item_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size70"
+                android:layout_marginTop="@dimen/size24">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="昵称"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@mipmap/icon_forward_ccc"
+                    android:drawablePadding="@dimen/size16"
+                    android:padding="@dimen/size8"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size1"
+                android:background="@color/color_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/item_gender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size70"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="性别"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@mipmap/icon_forward_ccc"
+                    android:drawablePadding="@dimen/size16"
+                    android:padding="@dimen/size8"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size1"
+                android:background="@color/color_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/item_age"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size70"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="生日"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@mipmap/icon_forward_ccc"
+                    android:drawablePadding="@dimen/size16"
+                    android:padding="@dimen/size8"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size1"
+                android:background="@color/color_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/item_city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size70"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="位置"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@mipmap/icon_forward_ccc"
+                    android:drawablePadding="@dimen/size16"
+                    android:padding="@dimen/size8"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size1"
+                android:background="@color/color_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/item_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size70"
+                >
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="简介"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/size50"
+                    android:layout_alignEnd="@id/tv_title"
+                    android:drawableEnd="@mipmap/icon_forward_ccc"
+                    android:drawablePadding="@dimen/size16"
+                    android:padding="@dimen/size8"
+                    android:maxLength="30"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16" />
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

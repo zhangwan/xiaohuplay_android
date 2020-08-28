@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size45"
+    android:paddingRight="@dimen/size15">
+
+    <LinearLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size35"
+        android:background="@drawable/solid_rectangle_5_f7f7f7"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size10">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/size18"
+            android:layout_height="@dimen/size18"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/size5"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size35"
+            android:background="@drawable/solid_rectangle_5_f7f7f7"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="@dimen/size5"
+            android:paddingRight="@dimen/size10"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize12" />
+    </LinearLayout>
+
+</FrameLayout>

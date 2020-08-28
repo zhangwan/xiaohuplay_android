@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">小虎Hoo</string>
+
+
+    <string name="location_map">地图定位</string>
+    <string name="format_mylocation">我的位置：%s</string>
+
+
+    <string name="input_phone_member">请输入手机号码</string>
+    <string name="input_phone_code">请输入短信验证码</string>
+    <string name="input_password">请输入密码</string>
+    <string name="input_password_new">请输入新密码</string>
+    <string name="input_password_more">请输入新密码(8-16位字符，数字+大小写字母任意组合)</string>
+    <string name="input_password_again">请再次输入密码</string>
+
+
+    <string name="error_phone_member_empty">手机号码不能为空</string>
+    <string name="error_phone_member_match">手机号码格式不正确</string>
+    <string name="error_phone_match">手机号错误</string>
+    <string name="error_password_empty">密码不能为空</string>
+    <string name="error_password_match">密码格式不正确</string>
+    <string name="error_nickname_empty">昵称不能为空</string>
+    <string name="error_code_empty">验证码不为空</string>
+    <string name="error_code_match">验证码格式不正确</string>
+    <string name="error_password_no_equal">两次密码输入不同，请重新输入</string>
+    <string name="error_avatar">验证码格式不正确</string>
+
+    <string name="error_network">网络不可用</string>
+
+    <string name="digits_0">0123456789</string>
+    <string name="digits_1">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="digits_2">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ%\n</string>
+    <string name="digits_3">0123456789X</string>
+
+    <string name="login">登录</string>
+    <string name="code_login">验证码登录</string>
+    <string name="password_login">密码登录</string>
+    <string name="other_login">其他登录方式</string>
+    <string name="login_wechat">微信登录</string>
+    <string name="login_qq">QQ登录</string>
+    <string name="login_info">登录代表你已经同意小虎HooAPP用户政策，隐私协议</string>
+    <string name="setting_password_info">请设置8-16位字符，数字+大小写字母任意组合\n 下次登录时可使用密码登录</string>
+    <string name="get_code">获取验证码</string>
+    <string name="sent_code">验证码发送成功</string>
+    <string name="code_acquire">重新获取</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="look_back_password">找回密码</string>
+    <string name="set_your_account">请为你的账户 +86 </string>
+    <string name="input_verify_code">输入验证码</string>
+
+    <string name="skip">跳过</string>
+    <string name="next">下一步</string>
+    <string name="reset_password">重置密码</string>
+    <string name="set_new_password">设置一个新密码</string>
+
+    <string name="behavior">com.stone.view.AppBarBehavior</string>
+
+    <string name="homepage">个人主页</string>
+    <string name="edit_info">编辑资料</string>
+    <string name="fans">粉丝</string>
+    <string name="attention">关注</string>
+    <string name="get_like">获赞</string>
+    <string name="attention_content">关注内容</string>
+    <string name="mine_collection">我的收藏</string>
+    <string name="history_record">历史记录</string>
+    <string name="mine_merit">勋章墙</string>
+    <string name="mine_game">云游戏秒玩</string>
+    <string name="mine_circle">我的圈子</string>
+    <string name="mine_drafts">草稿箱</string>
+    <string name="setting">设置</string>
+    <string name="invite_friend">邀请好友</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about">关于小虎Hoo</string>
+    <string name="account">账户</string>
+    <string name="privacy">隐私</string>
+    <string name="notice">通知</string>
+    <string name="edit_password">修改密码</string>
+    <string name="private_letter">私信</string>
+
+    <string name="account_wechat">微信账号</string>
+    <string name="account_qq">QQ账号</string>
+    <string name="bind">绑定</string>
+    <string name="unbind">解除绑定</string>
+    <string name="nick_name">昵称</string>
+    <string name="constellation">星座</string>
+    <string name="city">城市</string>
+    <string name="login_or_register">立即登录/注册</string>
+    <string name="user_info">个人资料</string>
+    <string name="account_security">账号与安全</string>
+    <string name="logout">退出登录</string>
+    <string name="replay">重新播放</string>
+    <string name="submit">提交</string>
+    <string name="change_background">更换背景</string>
+    <string name="author">作者</string>
+    <string name="mine_games">我的游戏</string>
+    <string name="mine_works">我的发布</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="mine_release_comment">点评</string>
+    <string name="mine_release_dynamic">动态</string>
+    <string name="mine_release_answers">问答</string>
+    <string name="report_user">举报用户</string>
+    <string name="report_opus">举报作品</string>
+
+    <string name="collect_succeed_hint">取消收藏成功</string>
+    <string name="note_answers_tip">%1$s人参与回答</string>
+    <string name="release_del_hint">成功删除%1$s条作品</string>
+
+    <string name="post_answers_tip">已有%1$s人参与回答</string>
+    <string name="game_library_title_heat">展示小虎hoo近期下载和讨论量最高的手游，汇聚新品和高品质手游，关注热度榜就能掌握热门手游市场。</string>
+    <string name="game_library_title_active">展示小虎hoo近期游戏社区活跃度高的手游，了解玩家圈子都在聊什么，关注活跃榜让你第一时间发现好友！</string>
+    <string name="post_video_audit_tip">视频正在审核中，请耐心等待</string>
+    <string name="post_video_failure_tip">很抱歉，视频审核失败</string>
+    <string name="post_video_no_share_tip">视频正在审核中,暂时还不能分享</string>
+
+    <string name="circle_game">查看游戏</string>
+    <string name="circle_apply">申请</string>
+    <string name="collect_time">收藏于%1$s</string>
+    <string name="game_cloud_details">消耗明细</string>
+    <string name="game_cloud_duration">增加时长</string>
+    <string name="game_cloud_">我的秒玩时长:</string>
+    <string name="edit_hint_say_some">悄咪咪的说几句…</string>
+    <string name="wallet_energy_like_comment">每次对1篇圈子动态/安利文/游戏评价/问答作出表态\n你将消耗1点能量</string>
+    <string name="wallet_energy_action">每次进行固定用户行为将获得积分激励，包括：游戏下载/分享/邀请/回答\n你将消耗15点能量</string>
+
+    <string name="circle_add_title">我加入的</string>
+    <string name="circle_browse_title">最近浏览</string>
+    <string name="dialog_amway_index">安利指数</string>
+    <string name="dialog_app_desc">玩“好”游戏</string>
+    <string name="home_more_classify">更多分类</string>
+
+    <string name="mine_circle_num_tips">%1$s人加入了圈子</string>
+    <string name="home_second_play">秒玩</string>
+    <string name="home_bespoke">预约</string>
+    <string name="home_bespoke_succeed">预约成功</string>
+</resources>
+

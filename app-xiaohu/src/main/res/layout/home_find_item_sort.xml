@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_content"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/size110"
+    android:paddingLeft="@dimen/size15"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/size65"
+        android:layout_height="@dimen/size65"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:riv_border_width="0dip"
+        app:riv_corner_radius="@dimen/size10"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="@dimen/size65"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:paddingTop="@dimen/size5"
+        android:text="实打实大师的撒大大是的 "
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize12" />
+</LinearLayout>

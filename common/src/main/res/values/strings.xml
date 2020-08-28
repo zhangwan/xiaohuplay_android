@@ -1,0 +1,95 @@
+
+<resources>
+    <string name="app_name">common</string>
+
+
+    <string name="message_permission_rationale">允许以下权限以便程序继续执行：\n\n%1$s</string>
+    <string name="message_permission_always_failed">请在设置中授予我们许可：\n\n%1$s</string>
+
+    <string name="tips">提示</string>
+    <string name="resume">确定</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="complete">完成</string>
+
+    <string name="boy">男</string>
+    <string name="girl">女</string>
+    <string name="date_picker_view_year">年</string>
+    <string name="date_picker_view_month">月</string>
+    <string name="date_picker_view_day">日</string>
+
+    <string name="empty_view_hint">空空如也~</string>
+    <string name="error_view_hint">加载失败</string>
+    <string name="no_network_view_hint">网络异常</string>
+    <string name="network_download">network_download</string>
+
+
+    <!--sp保存数据-->
+    <string name="android_id">android_id</string>
+    <string name="channel">channel</string>
+    <string name="version">version</string>
+    <string name="download_apk">download_apk</string>
+    <string name="show_fans">first_fans</string>
+    <string name="fans_num">first_fans_num</string>
+
+    <string name="token">token</string>
+    <string name="user_id">user_id</string>
+    <string name="username">user_name</string>
+
+    <string name="netease_id">netease_id</string>
+    <string name="netease_token">netease_token</string>
+
+    <string name="nickname">nickname</string>
+    <string name="avatar">avatar</string>
+    <string name="gender">gender</string>
+    <string name="sex">sex</string>
+
+    <string name="wechat_unionid">weixin_unionid</string>
+    <string name="qq_unionid">weixin_unionid</string>
+
+    <string name="bind_type">bind_type</string>
+    <string name="bind_unionid">bind_unionid</string>
+
+    <string name="game_title">game_title</string>
+
+    <string name="props_tab">props_tab</string>
+    <string name="props_tab_me">props_tab_me</string>
+    <string name="props_user">props_user</string>
+
+    <string name="master_type">master_type</string>
+    <string name="medal_image">medal_image</string>
+
+    <string name="wiki_first">wiki_first</string>
+
+    <string name="android_web_url">android_web_url</string>
+    <string name="search_history">search_history</string>
+    <string name="search_history_wiki">search_wiki_history</string>
+
+    <string name="start_app">start_app</string>
+    <string name="start_time">start_time</string>
+
+    <string name="open_page">open_page</string>
+    <string name="open_page_id">open_page_id</string>
+    <string name="open_popup">open_popup</string>
+    <string name="im_size">im_size</string>
+    <string name="update_version">update_version</string>
+
+    <string name="tool_config">tool_config</string>
+    <string name="tool_config_url">tool_config_url</string>
+
+    <string name="game_yun_id">game_yun_id</string>
+    <string name="game_yun_time">game_yun_time</string>
+
+    <string name="im_secretary">titixhdj1d50e8d7a924f573bb4954b</string>
+    <string name="im_comment">titixhdj86008d456b382b9044ee2b2</string>
+    <string name="im_like">titixhdj0c2fd5a5d566c6505c91063</string>
+
+    <string name="no_jump">titixhdj1ee5d7e7f46eb168e7e5cfd</string>
+    <string name="no_molecule1">titixhdjea58cebb79cf000ee342883</string>
+    <string name="no_molecule2">titixhdj9d4468b3d246db9d1084229</string>
+
+    <string name="logo">https://cdn.tinytiger.cn/b55e2898efbe44673559b1a287a9960.png</string>
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="indicator">%1$s/%2$s</string>
+</resources>
+

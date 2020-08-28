@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size80"
+    android:paddingLeft="@dimen/size15"
+    android:paddingTop="@dimen/size10"
+    android:id="@+id/rlInfo"
+    android:paddingRight="@dimen/size15">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ivIcon"
+        android:ellipsize="end"
+        android:paddingRight="@dimen/size5"
+        android:lines="2"
+        android:text="@string/app_name"
+        android:textColor="@color/gray28"
+        android:textSize="@dimen/textSize14" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_toLeftOf="@+id/ivIcon"
+        android:paddingBottom="@dimen/size10"
+        android:text="@string/app_name"
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize10" />
+
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="@dimen/size110"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/size60"
+        android:layout_alignParentRight="true" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_line2" />
+</RelativeLayout>

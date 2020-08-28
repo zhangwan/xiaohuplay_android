@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginBottom="@dimen/size45"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/size15"
+            android:text="合计：3种道具，共9件"
+            android:textColor="@color/gray99"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvComplete"
+            android:layout_width="@dimen/size120"
+            android:layout_height="@dimen/size30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/solid_gradient_20_ffcc03"
+            android:textColor="@color/gray33"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="@dimen/textSize16" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvTitle"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size40"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_props_over" />
+
+        <TextView
+            android:id="@+id/btn_See"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size40"
+            android:text="去看看"
+            android:background="@drawable/solid_gradient_20_ffcc03"
+            android:textColor="@color/gray33"
+            android:layout_below="@+id/ivOver"
+            android:layout_marginLeft="@dimen/size40"
+            android:layout_marginTop="@dimen/size40"
+            android:layout_marginRight="@dimen/size40"
+            android:textSize="@dimen/textSize14"
+            android:gravity="center"
+
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_root_view"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/size5"
+    android:layout_height="@dimen/size_title">
+
+    <View
+        android:id="@+id/ivLine"
+        android:layout_width="@dimen/size45"
+        android:layout_height="@dimen/size5"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/solid_gradient_3_ffe807" />
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:minWidth="@dimen/size45"
+        android:paddingRight="@dimen/size15"
+        android:text="关注"
+        android:textColor="@color/gray77"
+        android:textSize="@dimen/textSize12" />
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_toRightOf="@+id/tvTitle1"
+        android:paddingRight="@dimen/size15"
+        android:text="推荐"
+        android:textColor="@color/gray77"
+        android:textSize="@dimen/textSize12" />
+
+</RelativeLayout>

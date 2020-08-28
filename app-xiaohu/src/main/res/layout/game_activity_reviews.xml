@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/size50"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlGame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size160"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/ivBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size30"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray4D" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="@dimen/size15"
+                    android:paddingBottom="@dimen/size7"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+
+                <TextView
+                    android:id="@+id/tv_namesize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:drawableRight="@mipmap/icon_right_w"
+                    android:drawablePadding="@dimen/size7"
+                    android:paddingLeft="@dimen/size15"
+                    android:paddingRight="@dimen/size10"
+                    android:paddingBottom="@dimen/size7"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/size15">
+
+                <com.tinytiger.common.view.title.AvatarView
+                    android:id="@+id/avUser"
+                    android:layout_width="@dimen/size40"
+                    android:layout_height="@dimen/size40"
+                    android:layout_marginRight="@dimen/size15"
+                    app:TalentSize="@dimen/size40" />
+
+                <com.tinytiger.titi.widget.text.MedalTextView
+                    android:id="@+id/tvName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/tvAttention1"
+                    android:layout_toEndOf="@+id/avUser"
+                    android:paddingBottom="@dimen/size5"
+                    app:medal_is_bold="true"
+                    app:medal_textColor="@color/gray28"
+                    app:medal_textSize="@dimen/textSize14" />
+
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar1"
+                    style="@style/RadingStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName1"
+                    android:layout_toRightOf="@+id/avUser"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:rating="1" />
+
+                <TextView
+                    android:id="@+id/tvAttention1"
+                    android:layout_width="@dimen/size70"
+                    android:layout_height="@dimen/size30"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@drawable/stroke_rectangle_16_ffcc03"
+                    android:gravity="center"
+                    android:text="+ 关注"
+                    android:textColor="@color/color_ffcc03"
+                    android:textSize="@dimen/textSize14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/size15"
+                android:paddingBottom="@dimen/size15"
+                android:textColor="@color/color_514617"
+                android:textSize="@dimen/textSize15"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.tinytiger.common.view.web.X5TxtWebView
+                android:id="@+id/x5webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_marginRight="@dimen/size15"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/tvSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/size15"
+                android:text="轻点标签表示赞同"
+                android:textColor="@color/grayAA"
+                android:textSize="@dimen/textSize12"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:padding="@dimen/size15"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size15"
+                android:background="@color/color_bg" />
+
+            <RelativeLayout
+                android:id="@+id/rlList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size45"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/size12"
+                android:paddingRight="@dimen/size15">
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/magic_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/tvSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_ffcc03"
+                    android:textSize="@dimen/textSize12" />
+            </RelativeLayout>
+
+            <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnableFooterFollowWhenLoadFinished="true"
+                app:srlEnableScrollContentWhenLoaded="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <com.scwang.smart.refresh.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlAccentColor="@color/grayAA"
+                    app:srlClassicsSpinnerStyle="Translate"
+                    app:srlTextNothing="--- 人家是一只有底线的小脑斧 ---"
+                    app:srlTextSizeTitle="@dimen/textSize12" />
+            </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size80"
+        android:background="@drawable/solid_rectangle_333_50_linear" />
+
+    <ImageView
+        android:id="@+id/iv_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size80"
+        android:alpha="0"
+        android:scaleType="centerCrop" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size80"
+        android:paddingLeft="@dimen/size50"
+        android:paddingTop="@dimen/size37"
+        android:paddingRight="@dimen/size15"
+        android:visibility="gone">
+
+
+        <com.tinytiger.common.view.title.AvatarView
+            android:id="@+id/avUserTitle"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:layout_marginRight="@dimen/size10"
+            app:TalentSize="@dimen/size40" />
+
+        <com.tinytiger.titi.widget.text.MedalTextView
+            android:id="@+id/tvNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size1"
+            android:layout_toLeftOf="@+id/tvAttention"
+            android:layout_toRightOf="@+id/avUserTitle"
+            android:paddingBottom="@dimen/size3"
+            app:medal_is_bold="true"
+            app:medal_textColor="@color/white"
+            app:medal_textSize="@dimen/textSize14" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RadingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNameTitle"
+            android:layout_toRightOf="@+id/avUserTitle"
+            android:isIndicator="true"
+            android:numStars="5" />
+
+
+        <TextView
+            android:id="@+id/tvAttention"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size28"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size8"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/solid_gradient_15_ffcc03"
+            android:gravity="center"
+            android:text="+ 关注"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size80"
+        android:paddingTop="@dimen/size37">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/size40"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/size15"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back_white" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15"
+            android:src="@mipmap/icon_more_w" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_above="@+id/llEt"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:id="@+id/llEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/et_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size12"
+            android:layout_marginTop="@dimen/size2"
+            android:layout_weight="1"
+            android:background="@drawable/solid_rectangle_30_f7f7f7"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/size40"
+            android:paddingStart="@dimen/size8"
+            android:paddingEnd="@dimen/size8"
+            android:singleLine="true"
+            android:text="悄咪咪的说几句…"
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize12" />
+
+        <LinearLayout
+            android:id="@+id/flRead"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/size7">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_read" />
+
+            <TextView
+                android:id="@+id/tv_comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size5"
+                android:textColor="@color/gray66"
+                android:textSize="@dimen/size13"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.tinytiger.titi.widget.view.Anim.LikeView
+            android:id="@+id/viewLike"
+            android:layout_width="@dimen/size45"
+            android:layout_height="@dimen/size50"
+            android:paddingTop="@dimen/size5" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="@dimen/size45"
+            android:layout_height="@dimen/size50"
+            android:paddingTop="@dimen/size5"
+            android:paddingRight="@dimen/size5"
+            android:scaleType="center"
+            android:src="@mipmap/icon_share" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+

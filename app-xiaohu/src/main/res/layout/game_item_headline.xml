@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlItem"
+        android:layout_width="315dip"
+        android:layout_height="450dip"
+        android:layout_gravity="center"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size180"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/ivStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size70"
+            android:src="@mipmap/icon_video_start" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvTitle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size10"
+            android:layout_marginBottom="@dimen/size10"
+            android:background="#7f201f1e"
+            android:paddingLeft="@dimen/size4"
+            android:paddingRight="@dimen/size4"
+            android:text="00000"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize10" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivBg"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size10"
+            android:paddingRight="@dimen/size15"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/app_name"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:layout_below="@+id/tvTitle"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size15"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_toLeftOf="@+id/tvAttention"
+            android:layout_toRightOf="@+id/ivIcon"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="@dimen/size10"
+            android:paddingTop="@dimen/size10"
+            android:text="@string/app_name"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tvAttention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/bg_selector_attention"
+            android:gravity="center"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize10" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIcon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="3"
+            android:paddingLeft="@dimen/size15"
+            android:paddingTop="@dimen/size20"
+            android:paddingRight="@dimen/size15"
+            android:paddingBottom="@dimen/size10"
+            android:text=""
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size55"
+            android:text="点击阅读全文"
+            android:textColor="@color/color_ffcc03" />
+
+        <TextView
+            android:id="@+id/tvLikeNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginBottom="2dp"
+            android:drawableLeft="@mipmap/icon_like"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center"
+            android:padding="@dimen/size15"
+            android:text="0"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize16" />
+
+        <TextView
+            android:id="@+id/tvReadNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/icon_read"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center"
+            android:padding="@dimen/size15"
+            android:text="0"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size15"
+            android:drawableLeft="@mipmap/icon_share"
+            android:drawablePadding="@dimen/size5"
+            android:gravity="center"
+            android:padding="@dimen/size15"
+            android:text="分享"
+            android:textColor="@color/gray28"
+            android:textSize="@dimen/textSize14" />
+    </RelativeLayout>
+
+</FrameLayout>

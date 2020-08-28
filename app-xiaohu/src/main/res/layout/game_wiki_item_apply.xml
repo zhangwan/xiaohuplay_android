@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/icon_wiki_apply"
+    android:paddingTop="1320dp"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/iView"
+        layout="@layout/game_wiki_item_addform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_marginBottom="@dimen/size25" />
+</LinearLayout>

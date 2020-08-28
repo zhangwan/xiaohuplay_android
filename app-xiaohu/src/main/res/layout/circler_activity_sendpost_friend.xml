@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/size50"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="邀请回答"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/llSend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="(0/5)"
+                android:textColor="@color/grayAA"
+                android:textSize="@dimen/textSize12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/size15"
+                android:gravity="center"
+                android:paddingLeft="@dimen/size5"
+                android:text="邀请"
+                android:textColor="@color/color_ffcc03"
+                android:textSize="@dimen/textSize12" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size15"
+            android:paddingRight="@dimen/size15">
+
+            <EditText
+                android:id="@+id/et_send"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size30"
+                android:background="@drawable/solid_rectangle_15_f5f6f7"
+                android:drawableLeft="@mipmap/icon_search_g"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/size8"
+                android:focusable="true"
+                android:hint="输入用户昵称搜索"
+                android:imeOptions="actionSearch"
+                android:maxLength="10"
+                android:paddingStart="@dimen/size15"
+                android:paddingRight="@dimen/size50"
+                android:singleLine="true"
+                android:textColor="@color/gray28"
+                android:textColorLink="@color/gray99"
+                android:textSize="@dimen/textSize12" />
+
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="@dimen/size50"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="center"
+                android:src="@mipmap/icon_close"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size30"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/size15"
+            android:background="@drawable/solid_gradient_20_ffcc03"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+
+    </LinearLayout>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnableScrollContentWhenLoaded="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInvite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:scrollbars="none" />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="@color/grayAA"
+            app:srlTextNothing="--- 人家是一只有底线的小脑斧 ---"
+            app:srlClassicsSpinnerStyle="Translate"
+            app:srlTextSizeTitle="@dimen/textSize12" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

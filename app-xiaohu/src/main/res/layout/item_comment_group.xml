@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_logo"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_marginStart="@dimen/size16"
+        android:layout_marginTop="@dimen/size16"
+        android:scaleType="center"
+        android:src="@mipmap/icon_person_head"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/item_username"
+        style="@style/TextMainType"
+        android:layout_alignTop="@id/item_logo"
+        android:layout_marginStart="@dimen/size10"
+        android:layout_toEndOf="@id/item_logo"
+        android:textColor="@color/gray99" />
+
+
+    <TextView
+        android:id="@+id/item_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_username"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_toEndOf="@id/item_username"
+        android:background="@drawable/stroke_rectangle_2_ffcc03"
+        android:paddingStart="@dimen/size4"
+        android:paddingTop="@dimen/size2"
+        android:paddingEnd="@dimen/size4"
+        android:paddingBottom="@dimen/size2"
+        android:text="@string/author"
+        android:textColor="@color/color_ffcc03"
+        android:textSize="@dimen/textSize10"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_author"
+        android:layout_marginStart="@dimen/size8"
+        android:layout_toEndOf="@id/item_author"
+        android:src="@mipmap/icon_hot"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/size8"
+        android:layout_margin="@dimen/size4"
+        android:src="@mipmap/icon_more_g" />
+
+
+    <TextView
+        android:id="@+id/item_content"
+        style="@style/TextMainType"
+        android:layout_below="@id/item_username"
+        android:layout_alignStart="@id/item_username"
+        android:layout_alignEnd="@id/item_more"
+        android:layout_marginTop="@dimen/size4"
+        android:layout_marginEnd="@dimen/size16"
+        android:gravity="start"
+        android:maxLines="6"
+   />
+
+
+    <TextView
+        android:id="@+id/item_time"
+        style="@style/TextInfoType"
+        android:layout_below="@id/item_content"
+        android:layout_alignStart="@id/item_content"
+        android:layout_marginTop="@dimen/size4"
+        android:layout_marginBottom="@dimen/size8"
+  />
+
+
+    <TextView
+        android:id="@+id/item_like_num"
+        style="@style/TextInfoType"
+        android:layout_below="@id/item_content"
+        android:layout_toStartOf="@id/item_comment_num"
+        android:drawableStart="@drawable/selector_like_comment"
+        android:padding="@dimen/size2"
+        android:text="0" />
+
+
+    <TextView
+        android:id="@+id/item_comment_num"
+        style="@style/TextInfoType"
+        android:layout_below="@id/item_content"
+        android:layout_alignEnd="@id/item_content"
+        android:layout_marginStart="@dimen/size10"
+        android:drawableStart="@mipmap/icon_read"
+        android:padding="@dimen/size2"
+ />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/size20"
+        android:paddingTop="@dimen/size10"
+        android:paddingRight="@dimen/size20">
+
+        <com.ms.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:delay_time="4500"
+            app:indicator_drawable_selected="@drawable/dot_ffcc03_5"
+            app:indicator_drawable_unselected="@drawable/dot_e3e3e3" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grayF7"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/size15"
+        android:paddingTop="@dimen/size5"
+        android:paddingRight="@dimen/size15"
+        android:paddingBottom="@dimen/size5"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginRight="@dimen/size15"
+        android:background="@color/color_f2f2f2" />
+</LinearLayout>

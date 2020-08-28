@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/size30"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/ivBannerBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/banner_shadow"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tvBespoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size10"
+        android:paddingTop="@dimen/size2"
+        android:paddingEnd="@dimen/size10"
+        android:paddingBottom="@dimen/size2"
+        android:gravity="center"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/size15"
+        android:layout_marginStart="@dimen/size15"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llLabel"
+        android:layout_width="@dimen/size180"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size15"
+        android:layout_marginBottom="@dimen/size15"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/tvBespoke"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_label0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle"
+            android:paddingLeft="@dimen/size5"
+            android:paddingTop="@dimen/size2"
+            android:paddingEnd="@dimen/size5"
+            android:paddingBottom="@dimen/size2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_11"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size7"
+            android:background="@drawable/shape_rectangle"
+            android:paddingLeft="@dimen/size5"
+            android:paddingTop="@dimen/size2"
+            android:paddingEnd="@dimen/size5"
+            android:paddingBottom="@dimen/size2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_11"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size7"
+            android:background="@drawable/shape_rectangle"
+            android:paddingLeft="@dimen/size5"
+            android:paddingTop="@dimen/size2"
+            android:paddingEnd="@dimen/size5"
+            android:paddingBottom="@dimen/size2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_11"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBannerGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size15"
+        android:layout_marginBottom="@dimen/size6"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintBottom_toTopOf="@+id/llLabel"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <com.tinytiger.common.widget.radarview.RadarViewRoot
+        android:id="@+id/radarRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size10"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:layout_marginBottom="@dimen/size5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

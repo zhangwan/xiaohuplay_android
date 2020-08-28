@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_content"
+    android:layout_width="330dp"
+    android:layout_height="@dimen/size320"
+    android:layout_marginRight="@dimen/size10"
+    android:background="@drawable/solid_rectangle_10_f7f7f7">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivGame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size140"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"
+        app:riv_border_width="0dip"
+        app:riv_corner_radius_top_left="@dimen/size10"
+        app:riv_corner_radius_top_right="@dimen/size10"
+        app:riv_oval="false" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/size50"
+        android:layout_height="@dimen/size50"
+        android:layout_below="@+id/ivGame"
+        android:layout_marginLeft="@dimen/size15"
+        android:layout_marginTop="-15dp"
+        android:scaleType="centerCrop"
+        app:riv_border_color="@color/white"
+        app:riv_border_width="@dimen/size2"
+        android:src="@mipmap/ic_launcher"
+        app:riv_oval="true" />
+
+    <com.tinytiger.titi.widget.text.MedalTextView
+        android:id="@+id/mtvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivLogo"
+        android:paddingLeft="@dimen/size5"
+        android:paddingTop="@dimen/size5"
+        android:layout_below="@+id/ivGame"
+        app:medal_textColor="@color/gray99"
+        app:medal_textSize="@dimen/textSize14" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBar"
+        style="@style/RadingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivGame"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size5"
+        android:layout_marginRight="@dimen/size15"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:paddingTop="@dimen/size5" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogo"
+        android:paddingLeft="@dimen/size15"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize16"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/size15"
+        android:paddingRight="@dimen/size15"
+        android:layout_below="@+id/tvTitle"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.2"
+        android:lines="4"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize14" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/size15"
+        android:paddingBottom="@dimen/size10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来自 "
+            android:textColor="@color/gray99"
+            android:textSize="@dimen/textSize14" />
+
+        <TextView
+            android:id="@+id/tvGameName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小虎"
+            android:textColor="@color/gray33"
+            android:textSize="@dimen/textSize14" />
+    </LinearLayout>
+
+</RelativeLayout>

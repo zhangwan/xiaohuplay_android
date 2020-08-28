@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tinytiger.common">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application>
+        <activity
+            android:name="com.tinytiger.common.utils.image.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeNo" />
+        <activity
+            android:name="com.tinytiger.common.widget.picbrowser.view.ImagePreviewActivity"
+            android:theme="@style/Theme.ImagePreview" />
+    </application>
+</manifest>

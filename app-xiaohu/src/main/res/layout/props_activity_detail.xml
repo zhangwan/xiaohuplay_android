@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+       >
+
+    <com.tinytiger.common.view.title.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_image"
+                android:layout_alignStart="@id/iv_image"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_image"
+                android:layout_alignEnd="@id/iv_image"
+
+                android:textColor="@color/color_ffcc03"
+                android:textSize="@dimen/textSize14"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@id/tv_name"
+                android:layout_alignStart="@id/iv_image"
+                android:layout_alignEnd="@id/iv_image"
+                android:layout_marginTop="@dimen/size12"
+                android:background="@drawable/solid_gradient_20_ffcc03"
+                android:textColor="@color/gray33"
+                android:text="立即购买"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_privilege"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/size12"
+                android:layout_below="@id/tv_name"
+                android:background="@mipmap/icon_two_button"
+                android:layout_alignStart="@id/iv_image"
+                android:layout_alignEnd="@id/iv_image"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="购买"
+                    android:gravity="center"
+                    android:textColor="@color/color_ffcc03"
+                    android:textSize="@dimen/textSize16"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_wear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="佩戴"
+                    android:gravity="center"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/icon_recommend"
+        android:drawablePadding="@dimen/size6"
+        android:padding="@dimen/size8"
+        android:text="推荐道具"
+        android:textColor="@color/gray33"
+        android:textSize="@dimen/textSize18"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/size8"
+        android:paddingEnd="@dimen/size8" />
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_complete"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size40"
+                android:layout_marginTop="@dimen/textSize40"
+                android:src="@mipmap/icon_transaction"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易完成"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/size75"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/textSize20"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="@dimen/size50"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16"
+                    android:text="-"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#EE5E43"
+                    android:textSize="@dimen/textSize18"
+                    android:padding="@dimen/size2"
+                    android:text="0"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray33"
+                    android:textSize="@dimen/textSize16"
+                    android:text="H币"
+                    android:padding="@dimen/size2"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginTop="@dimen/size16"
+            android:paddingLeft="@dimen/size25"
+            android:paddingRight="@dimen/size25"
+            android:background="@drawable/solid_gradient_15_ffcc03"
+            android:text="去看看"
+            android:textColor="@color/color_ffcc03"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.main.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="@dimen/size200"
+            android:layout_height="@dimen/size45"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size45"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/size60"
+            android:layout_height="@dimen/size45"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:src="@mipmap/icon_more_b" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/size45"
+            android:layout_marginBottom="@dimen/size50" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:layout_above="@+id/llEt"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:id="@+id/llEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/et_send"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size12"
+                android:layout_marginTop="@dimen/size6"
+                android:layout_marginBottom="@dimen/size6"
+                android:layout_weight="1"
+                android:background="@drawable/solid_rectangle_20_f7f7f7"
+                android:drawablePadding="@dimen/size8"
+                android:focusable="true"
+                android:hint="悄咪咪的说几句…"
+                android:maxLength="1000"
+                android:maxLines="1"
+                android:paddingStart="@dimen/size15"
+                android:paddingEnd="@dimen/size15"
+                android:singleLine="true"
+                android:textColor="@color/gray28"
+                android:textColorLink="@color/gray99"
+                android:textSize="@dimen/textSize12" />
+
+            <com.tinytiger.titi.widget.view.Anim.LikeView
+                android:id="@+id/viewLike"
+                android:layout_width="@dimen/size45"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/size5" />
+
+            <com.tinytiger.titi.widget.view.Anim.ConllectionView
+                android:id="@+id/viewCollection"
+                android:layout_width="@dimen/size45"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/size5" />
+
+            <ImageView
+                android:id="@+id/ivShare"
+                android:layout_width="@dimen/size45"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/icon_share" />
+
+
+            <TextView
+                android:id="@+id/tv_send"
+                android:layout_width="@dimen/size60"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/send"
+                android:textColor="@color/gray28"
+                android:textSize="@dimen/textSize14"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

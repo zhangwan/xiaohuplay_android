@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size40"
+    android:layout_marginLeft="@dimen/size5"
+    android:layout_marginTop="@dimen/size5"
+    android:layout_marginRight="@dimen/size5"
+    android:layout_marginBottom="@dimen/size5"
+    android:background="@drawable/solid_rectangle_2_white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/size5"
+    android:paddingRight="@dimen/size5">
+
+    <ImageView
+        android:id="@+id/iv_game"
+        android:layout_width="@dimen/size20"
+        android:layout_height="@dimen/size20"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_hoo_logo" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:paddingLeft="@dimen/size4"
+        android:paddingRight="@dimen/size4"
+        android:text="@string/app_name"
+        android:textColor="@color/gray99"
+        android:textSize="@dimen/textSize14" />
+
+</LinearLayout>
